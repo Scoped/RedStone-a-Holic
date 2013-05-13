@@ -1,9 +1,8 @@
-
 RedStone-a-Holic
 
 MineCraftForum post: 
 
-Want this translated into your language? Contact us and we will be happy to add it!(With your help of cource!)
+Want this translated into another language? Contact us and we will be happy to add it!(With your help of cource!)
 
 How to install RedStone-a-Holic:
 
@@ -16,15 +15,14 @@ Skip steps 1-4 if you already have FML(1.5.2) installed.
 3.Extract FML files into mincraft.jar.
 4.Run MineCraft to let FML install some files.
 5.Place the RedStone-a-Holic.zip file into the mods folder, or extract it directly into minecraft.jar(In the .minecraft folder).
-
 -------------
 
 ---Mac---
-If you know how to install FML and WarriorCultures on a Mac system please contact obsidianCore or CraftedScorpio!
+If you know how to install FML and RedStone-a-Holic on a Mac system please contact CraftedScorpio!
 ---------
 
 ---Linux---
-If you know how to install FML and WarriorCultures on a Linux system please contact obsidianCore or CraftedScorpio!
+If you know how to install FML and RedStone-a-Holic on a Linux system please contact CraftedScorpio!
 -----------
 
 ---Like it, hate it, or just want to chat?---

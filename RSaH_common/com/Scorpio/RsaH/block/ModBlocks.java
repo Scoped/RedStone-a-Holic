@@ -1,7 +1,10 @@
 package com.Scorpio.RsaH.block;
 
+import com.Scorpio.RsaH.lib.BlockIDs;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+
 
 public class ModBlocks
 {
@@ -26,7 +29,7 @@ public class ModBlocks
 	*/
 	public static void BlocksInit()
 	{
-		BlueStoneBlock = new BlueStoneBlock(3100);
+		BlueStoneBlock = new Block_BlueStone(BlockIDs.BLOCK_BLUESTONE_ID);
 		/*
 		BlackStoneBlock = new BlackStoneBlock(3101);
 		BrownStoneBlock = new BrownStoneBlock(3102);

@@ -7,6 +7,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import com.Scorpio.RsaH.lib.Reference;
 
+
 public class BlockRSaH extends Block
 {
 	public BlockRSaH (int id, Material material){
@@ -15,7 +16,8 @@ public class BlockRSaH extends Block
 	
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void registerIcons(IconRegister register){
+	public void registerIcons(IconRegister register)
+	{
 		blockIcon = register.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(" , ")+1));
 	}
 }

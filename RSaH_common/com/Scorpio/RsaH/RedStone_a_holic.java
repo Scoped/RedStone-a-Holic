@@ -1,8 +1,15 @@
 package com.Scorpio.RsaH;
 
+import java.io.File;
+
+import net.minecraft.creativetab.CreativeTabs;
+
 import com.Scorpio.RsaH.block.ModBlocks;
+import com.Scorpio.RsaH.configuration.ConfigurationHandler;
 import com.Scorpio.RsaH.core.handler.LocalizationHandler;
 import com.Scorpio.RsaH.core.proxy.CommonProxy;
+import com.Scorpio.RsaH.creativeTab.TabRSaH;
+import com.Scorpio.RsaH.item.ModItems;
 import com.Scorpio.RsaH.lib.Reference;
 
 import cpw.mods.fml.common.Mod;
@@ -15,22 +22,13 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-/**
- * RedStone-a-Holic
- * 
- * RedStone-a-Holic
- * 
- * @author Scorpio
- * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
- * 
- */
-
 @Mod(
 		modid= Reference.MOD_ID ,
 		name = Reference.MOD_NAME,
 		version = Reference.VERSION)
 
 @NetworkMod(
+		channels = (Reference.CHANNEL_NAME),
 		serverSideRequired = false,
 		clientSideRequired = true)
 
@@ -42,12 +40,18 @@ public class RedStone_a_holic
 		serverSide = Reference.COMMON_PROXY_LOCATION)
 	public static CommonProxy proxy;
 	
+	public static CreativeTabs TabRSaH = new TabRSaH(CreativeTabs.getNextID(), Reference.MOD_ID);
+	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		ModBlocks.BlocksInit();
 		
+		ModItems.ItemInit();
+		
 		LocalizationHandler.loadLanguages();
+		
+		ConfigurationHandler.init(new File(event.getModConfigurationDirectory().getAbsoluteFile() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));
 	}
 	@Init
 	public void init(FMLInitializationEvent event)

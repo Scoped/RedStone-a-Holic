@@ -6,7 +6,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import com.Scorpio.RsaH.RedStone_a_holic;
 import com.Scorpio.RsaH.lib.Strings;
 
-
 public class Block_BlueStone extends BlockRSaH
 {
 	public Block_BlueStone(int id)

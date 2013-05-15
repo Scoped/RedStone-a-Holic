@@ -22,12 +22,12 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(
-		modid= Reference.MOD_ID ,
+	@Mod(
+		modid = Reference.MOD_ID ,
 		name = Reference.MOD_NAME,
 		version = Reference.VERSION)
-
-@NetworkMod(
+	
+	@NetworkMod(
 		channels = (Reference.CHANNEL_NAME),
 		serverSideRequired = false,
 		clientSideRequired = true)
@@ -45,13 +45,14 @@ public class RedStone_a_holic
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		ConfigurationHandler.init(new File(event.getModConfigurationDirectory().getAbsoluteFile() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));
+		
+		LocalizationHandler.loadLanguages();
+		
 		ModBlocks.BlocksInit();
 		
 		ModItems.ItemInit();
 		
-		LocalizationHandler.loadLanguages();
-		
-		ConfigurationHandler.init(new File(event.getModConfigurationDirectory().getAbsoluteFile() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));
 	}
 	@Init
 	public void init(FMLInitializationEvent event)

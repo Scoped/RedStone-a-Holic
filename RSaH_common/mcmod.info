@@ -1,0 +1,21 @@
+[
+{
+  "modid": "RSaH",
+  "name": "RedStone-a-Holic",
+  "description": "Just can't live without it...",
+  "version": "",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "CraftedScorpio",
+    "Shad0w_Phant0m"
+  ],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]

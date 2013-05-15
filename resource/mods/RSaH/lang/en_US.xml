@@ -3,6 +3,24 @@
 <properties version="1.0">
 	<comment>English (en_US) Localization File</comment>
 	<entry key="tile.Block_BlueStone.name">BlueStone Block</entry>
+	<entry key="tile.Block_BlackStone.name">BlackStone Block</entry>
+	<entry key="tile.Block_BrownStone.name">BrownStone Block</entry>
+	<entry key="tile.Block_CyanStone.name">CyanStone Block</entry>
+	<entry key="tile.Block_GlowStone.name">GlowStone Block</entry>
+	<entry key="tile.Block_GrayStone.name">GrayStone Block</entry>
+	<entry key="tile.Block_GreenStone.name">GreenStone Block</entry>
+	<entry key="tile.Block_LightBlueStone.name">LightBlueStone Block</entry>
+	<entry key="tile.Block_LightGrayStone.name">LightGrayStone Block</entry>
+	<entry key="tile.Block_LimeGreenStone.name">LimeGreenStone Block</entry>
+	<entry key="tile.Block_MagentaStone.name">MagentaStone Block</entry>
+	<entry key="tile.Block_OrangeStone.name">OrangeStone Block</entry>
+	<entry key="tile.Block_PinkStone.name">PinkStone Block</entry>
+	<entry key="tile.Block_PurpleStone.name">PurpleStone Block</entry>
+	<entry key="tile.Block_WhiteStone.name">WhiteStone Block</entry>
+	<entry key="tile.Block_YellowStone.name">YellowStone Block</entry>
+	<entry key="tile.Block_MagmaStone.name">MagmaStone Block</entry>
+	
 	<entry key="item.Item_Dust_BlueStone.name">BlueStone Dust</entry>
+	
 	<entry key="itemGroup.RSaH.Item_Dust_BlueStone.name">Top</entry>
 </properties>

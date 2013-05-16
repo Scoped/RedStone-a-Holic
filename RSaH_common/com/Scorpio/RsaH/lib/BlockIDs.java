@@ -5,7 +5,7 @@ public class BlockIDs
 	public static final int BLOCK_BLUESTONE_ID_DEFAULT = 257;
 	public static final int BLOCK_BLACKSTONE_ID_DEFAULT = 258;
 	public static final int BLOCK_BROWNSTONE_ID_DEFAULT = 259;
-	//public static final int BLOCK_CYANSTONE_ID_DEFAULT = 260;
+	public static final int BLOCK_CYANSTONE_ID_DEFAULT = 260;
 	public static final int BLOCK_GLOWSTONE_ID_DEFAULT = 261;
 	public static final int BLOCK_GREYSTONE_ID_DEFAULT = 262;
 	public static final int BLOCK_GREENSTONE_ID_DEFAULT = 263;
@@ -24,7 +24,7 @@ public class BlockIDs
 	public static int BLOCK_BLUESTONE_ID;
 	public static int BLOCK_BLACKSTONE_ID;
 	public static int BLOCK_BROWNSTONE_ID;
-	//public static int BLOCK_CYANSTONE_ID;
+	public static int BLOCK_CYANSTONE_ID;
 	public static int BLOCK_GLOWSTONE_ID;
 	public static int BLOCK_GREYSTONE_ID;
 	public static int BLOCK_GREENSTONE_ID;

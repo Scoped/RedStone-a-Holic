@@ -8,7 +8,7 @@ public class Strings
 	public static final String BLOCK_BLUESTONE_NAME = "BlueStone Block";
 	public static final String BLOCK_BLACKSTONE_NAME = "BlackStone Block";
 	public static final String BLOCK_BROWNSTONE_NAME = "BrownStone Block";
-	//public static final String BLOCK_CYANSTONE_NAME = "CyanStone Block";
+	public static final String BLOCK_CYANSTONE_NAME = "CyanStone Block";
 	public static final String BLOCK_GLOWSTONE_NAME = "GlowStone Block";
 	public static final String BLOCK_GRAYSTONE_NAME = "GreyStone Block";
 	public static final String BLOCK_GREENSTONE_NAME = "GreenStone Block";

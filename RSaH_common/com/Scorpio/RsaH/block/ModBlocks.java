@@ -33,7 +33,7 @@ public class ModBlocks
 		BlueStoneBlock = new Block_BlueStone(BlockIDs.BLOCK_BLUESTONE_ID);
 		BlackStoneBlock = new Block_BlackStone(BlockIDs.BLOCK_BLACKSTONE_ID);
 		BrownStoneBlock = new Block_BrownStone(BlockIDs.BLOCK_BROWNSTONE_ID);
-		//CyanStoneBlock = new Block_CyanStone(BlockIDs.BLOCK_CYANSTONE_ID);
+		CyanStoneBlock = new Block_CyanStone(BlockIDs.BLOCK_CYANSTONE_ID);
 		GlowStoneBlock = new Block_GlowStone(BlockIDs.BLOCK_GLOWSTONE_ID);
 		GrayStoneBlock = new Block_GrayStone(BlockIDs.BLOCK_GREYSTONE_ID);
 		GreenStoneBlock = new Block_GreenStone(BlockIDs.BLOCK_GREENSTONE_ID);
@@ -52,7 +52,7 @@ public class ModBlocks
 		GameRegistry.registerBlock(BlueStoneBlock, Strings.BLOCK_BLUESTONE_NAME);
 		GameRegistry.registerBlock(BlackStoneBlock, Strings.BLOCK_BLACKSTONE_NAME);
 		GameRegistry.registerBlock(BrownStoneBlock, Strings.BLOCK_BROWNSTONE_NAME);
-		//GameRegistry.registerBlock(CyanStoneBlock, Strings.BLOCK_CYANSTONE_NAME);
+		GameRegistry.registerBlock(CyanStoneBlock, Strings.BLOCK_CYANSTONE_NAME);
 		GameRegistry.registerBlock(GlowStoneBlock, Strings.BLOCK_GLOWSTONE_NAME);
 		GameRegistry.registerBlock(GrayStoneBlock, Strings.BLOCK_GRAYSTONE_NAME);
 		GameRegistry.registerBlock(GreenStoneBlock, Strings.BLOCK_GREENSTONE_NAME);

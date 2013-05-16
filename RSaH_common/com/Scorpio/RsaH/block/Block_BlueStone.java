@@ -1,7 +1,6 @@
 package com.Scorpio.RsaH.block;
 
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 
 import com.Scorpio.RsaH.RedStone_a_holic;
 import com.Scorpio.RsaH.lib.Strings;

@@ -1,12 +1,11 @@
 package com.Scorpio.RsaH.block;
 
+import net.minecraft.block.material.Material;
+
 import com.Scorpio.RsaH.RedStone_a_holic;
 import com.Scorpio.RsaH.lib.Strings;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-
-public class Block_StrangeStone extends Block
+public class Block_StrangeStone extends BlockRSaH
 {
 	public Block_StrangeStone(int id)
 	{

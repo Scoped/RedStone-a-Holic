@@ -9,6 +9,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModBlocks
 {
+	
+	/**
+	 * Block Declaration
+	 * Count: 18
+	 */
 	public static Block BlueStoneBlock;
 	public static Block BlackStoneBlock;
 	public static Block BrownStoneBlock;
@@ -28,8 +33,18 @@ public class ModBlocks
 	public static Block MagmaStoneBlock;
 	public static Block StrangeStoneBlock;
 	
+	/**
+	 * Block-Wire Declaration
+	 * Count: 1
+	 */
+	public static Block BlueStoneWireBlock;
+	
 	public static void BlocksInit()
 	{
+		/**
+		 * Block
+		 * Count: 18
+		 */
 		BlueStoneBlock = new Block_BlueStone(BlockIDs.BLOCK_BLUESTONE_ID);
 		BlackStoneBlock = new Block_BlackStone(BlockIDs.BLOCK_BLACKSTONE_ID);
 		BrownStoneBlock = new Block_BrownStone(BlockIDs.BLOCK_BROWNSTONE_ID);
@@ -49,6 +64,16 @@ public class ModBlocks
 		MagmaStoneBlock = new Block_MagmaStone(BlockIDs.BLOCK_MAGMASTONE_ID);
 		StrangeStoneBlock = new Block_StrangeStone(BlockIDs.BLOCK_STRANGESTONE_ID);
 		
+		/**
+		 * Block-Wire
+		 * Count: 1
+		 */
+		BlueStoneWireBlock = new Block_Wire_BlueStone(BlockIDs.BLOCK_WIRE_BLUESTONE_ID);
+		
+		/**
+		 * Block GameRegistry
+		 * Count: 18
+		 */
 		GameRegistry.registerBlock(BlueStoneBlock, Strings.BLOCK_BLUESTONE_NAME);
 		GameRegistry.registerBlock(BlackStoneBlock, Strings.BLOCK_BLACKSTONE_NAME);
 		GameRegistry.registerBlock(BrownStoneBlock, Strings.BLOCK_BROWNSTONE_NAME);

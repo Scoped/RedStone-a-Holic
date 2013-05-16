@@ -2,15 +2,18 @@ package com.Scorpio.RsaH.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+
 import net.minecraft.client.renderer.texture.IconRegister;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import com.Scorpio.RsaH.lib.Reference;
 
+import com.Scorpio.RsaH.lib.Reference;
 
 public class BlockRSaH extends Block
 {
-	public BlockRSaH (int id, Material material){
+	public BlockRSaH (int id, Material material)
+	{
 		super(id, material);
 	}
 	

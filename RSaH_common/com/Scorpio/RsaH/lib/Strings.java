@@ -25,6 +25,11 @@ public class Strings
 	public static final String BLOCK_STRANGESTONE_NAME = "StrangeStone Block";
 	
 	/**
+	 * Block-Wire Names
+	 */
+	public static final String BLOCK_WIRE_BLUESTONE_NAME = "BlueStone Wire";
+	
+	/**
 	 * Item Names
 	 */
 	public static final String ITEM_DUST_BLUESTONE_NAME = "BlueStone Dust";

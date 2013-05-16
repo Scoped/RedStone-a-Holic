@@ -21,6 +21,8 @@
 	<entry key="tile.MagmaStone Block.name">MagmaStone Block</entry>
 	<entry key="tile.StrangeStone Block.name">StrangeStone Block</entry>
 	
+	<entry key="tile.BlueStone Wire.name">BlueStone Wire</entry>
+	
 	<entry key="item.BlueStone Dust.name">BlueStone Dust</entry>
 	<entry key="item.BlackStone Dust.name">BlackStone Dust</entry>
 	<entry key="item.BrownStone Dust.name">BrownStone Dust</entry>

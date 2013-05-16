@@ -2,6 +2,10 @@ package com.Scorpio.RsaH.lib;
 
 public class BlockIDs
 {
+	
+	/**
+	 * Block Default IDs
+	 */
 	public static final int BLOCK_BLUESTONE_ID_DEFAULT = 257;
 	public static final int BLOCK_BLACKSTONE_ID_DEFAULT = 258;
 	public static final int BLOCK_BROWNSTONE_ID_DEFAULT = 259;
@@ -21,6 +25,14 @@ public class BlockIDs
 	public static final int BLOCK_MAGMASTONE_ID_DEFAULT = 273;
 	public static final int BLOCK_STRANGESTONE_ID_DEFAULT = 274;
 	
+	/**
+	 * Block-Wire Default IDs
+	 */
+	public static final int BLOCK_WIRE_BLUESOTNE_ID_DEFAULT = 275;
+	
+	/**
+	 * IDs
+	 */
 	public static int BLOCK_BLUESTONE_ID;
 	public static int BLOCK_BLACKSTONE_ID;
 	public static int BLOCK_BROWNSTONE_ID;
@@ -39,4 +51,10 @@ public class BlockIDs
 	public static int BLOCK_YELLOWSTONE_ID;
 	public static int BLOCK_MAGMASTONE_ID;
 	public static int BLOCK_STRANGESTONE_ID;
+	
+	/**
+	 * Block-Wire IDs
+	 */
+	public static int BLOCK_WIRE_BLUESTONE_ID;
+	
 }

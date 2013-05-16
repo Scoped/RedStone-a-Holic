@@ -25,7 +25,7 @@ public class ConfigurationHandler
 			config.load();
 			
 			/**
-			 * Blocks
+			 * Block Configuration
 			 */
 			BlockIDs.BLOCK_BLUESTONE_ID = config.getBlock(Strings.BLOCK_BLUESTONE_NAME, BlockIDs.BLOCK_BLUESTONE_ID_DEFAULT).getInt(BlockIDs.BLOCK_BLUESTONE_ID_DEFAULT);
 			BlockIDs.BLOCK_BLACKSTONE_ID = config.getBlock(Strings.BLOCK_BLACKSTONE_NAME, BlockIDs.BLOCK_BLACKSTONE_ID_DEFAULT).getInt(BlockIDs.BLOCK_BLACKSTONE_ID_DEFAULT);
@@ -47,7 +47,12 @@ public class ConfigurationHandler
 			BlockIDs.BLOCK_STRANGESTONE_ID = config.getBlock(Strings.BLOCK_STRANGESTONE_NAME, BlockIDs.BLOCK_STRANGESTONE_ID_DEFAULT).getInt(BlockIDs.BLOCK_STRANGESTONE_ID_DEFAULT);
 			
 			/**
-			 * Items
+			 * Block-Wire Configuration
+			 */
+			BlockIDs.BLOCK_WIRE_BLUESTONE_ID = config.getBlock(Strings.BLOCK_WIRE_BLUESTONE_NAME, BlockIDs.BLOCK_WIRE_BLUESOTNE_ID_DEFAULT).getInt(BlockIDs.BLOCK_WIRE_BLUESOTNE_ID_DEFAULT);			
+			
+			/**
+			 * Item Configuration
 			 */
 			ItemIDs.ITEM_DUST_BLUESTONE_ID = config.getItem(Strings.ITEM_DUST_BLUESTONE_NAME, ItemIDs.ITEM_DUST_BLUESTONE_ID_DEFAULT).getInt(ItemIDs.ITEM_DUST_BLUESTONE_ID_DEFAULT);
 			ItemIDs.ITEM_DUST_BLACKSTONE_ID = config.getItem(Strings.ITEM_DUST_BLACKSTONE_NAME, ItemIDs.ITEM_DUST_BLACKSTONE_ID_DEFAULT).getInt(ItemIDs.ITEM_DUST_BLACKSTONE_ID_DEFAULT);

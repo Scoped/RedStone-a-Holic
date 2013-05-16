@@ -2,25 +2,42 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties version="1.0">
 	<comment>English (en_US) Localization File</comment>
-	<entry key="tile.Block_BlueStone.name">BlueStone Block</entry>
-	<entry key="tile.Block_BlackStone.name">BlackStone Block</entry>
-	<entry key="tile.Block_BrownStone.name">BrownStone Block</entry>
-	<entry key="tile.Block_CyanStone.name">CyanStone Block</entry>
-	<entry key="tile.Block_GlowStone.name">GlowStone Block</entry>
-	<entry key="tile.Block_GrayStone.name">GrayStone Block</entry>
-	<entry key="tile.Block_GreenStone.name">GreenStone Block</entry>
-	<entry key="tile.Block_LightBlueStone.name">LightBlueStone Block</entry>
-	<entry key="tile.Block_LightGrayStone.name">LightGrayStone Block</entry>
-	<entry key="tile.Block_LimeGreenStone.name">LimeGreenStone Block</entry>
-	<entry key="tile.Block_MagentaStone.name">MagentaStone Block</entry>
-	<entry key="tile.Block_OrangeStone.name">OrangeStone Block</entry>
-	<entry key="tile.Block_PinkStone.name">PinkStone Block</entry>
-	<entry key="tile.Block_PurpleStone.name">PurpleStone Block</entry>
-	<entry key="tile.Block_WhiteStone.name">WhiteStone Block</entry>
-	<entry key="tile.Block_YellowStone.name">YellowStone Block</entry>
-	<entry key="tile.Block_MagmaStone.name">MagmaStone Block</entry>
+	<entry key="tile.BLOCK_BLUESTONE_NAME.name">BlueStone Block</entry>
+	<entry key="tile.BLOCK_BLACKSTONE_NAME.name">BlackStone Block</entry>
+	<entry key="tile.BLOCK_BROWNSTONE_NAME.name">BrownStone Block</entry>
+	<entry key="tile.BLOCK_CYANSTONE_NAME.name">CyanStone Block</entry>
+	<entry key="tile.BLOCK_GLOWSTONE_NAME.name">GlowStone Block</entry>
+	<entry key="tile.BLOCK_GRAYSTONE_NAME.name">GrayStone Block</entry>
+	<entry key="tile.BLOCK_GREENSTONE_NAME.name">GreenStone Block</entry>
+	<entry key="tile.BLOCK_LIGHTBLUESTONE_NAME.name">LightBlueStone Block</entry>
+	<entry key="tile.BLOCK_LIGHTGRAYSTONE_NAME.name">LightGrayStone Block</entry>
+	<entry key="tile.BLOCK_LIMEGREENSTONE_NAME.name">LimeGreenStone Block</entry>
+	<entry key="tile.BLOCK_MAGENTASTONE_NAME.name">MagentaStone Block</entry>
+	<entry key="tile.BLOCK_ORANGESTONE_NAME.name">OrangeStone Block</entry>
+	<entry key="tile.BLOCK_PINKSTONE_NAME.name">PinkStone Block</entry>
+	<entry key="tile.BLOCK_PURPLESTONE_NAME.name">PurpleStone Block</entry>
+	<entry key="tile.BLOCK_WHITESTONE_NAME.name">WhiteStone Block</entry>
+	<entry key="tile.BLOCK_YELLOWSTONE_NAME.name">YellowStone Block</entry>
+	<entry key="tile.BLOCK_MAGMASTONE_NAME.name">MagmaStone Block</entry>
+	<entry key="tile.BLOCK_STRANGESTONE_NAME.name">StrangeStone Block</entry>
 	
 	<entry key="item.Item_Dust_BlueStone.name">BlueStone Dust</entry>
+	<entry key="item.ITEM_DUST_BLACKSTONE_NAME.name">BlackStone Dust</entry>
+	<entry key="item.ITEM_DUST_BROWNSTONE_NAME.name">BrownStone Dust</entry>
+	<entry key="item.ITEM_DUST_CYANSTONE_NAME.name">CyanStone Dust</entry>
+	<entry key="item.ITEM_DUST_GLOWSTONE_NAME.name">GlowStone Dust</entry>
+	<entry key="item.ITEM_DUST_GRAYSTONE_NAME.name">GrayStone Dust</entry>
+	<entry key="item.ITEM_DUST_GREENSTONE_NAME.name">GreenStone Dust</entry>
+	<entry key="item.ITEM_DUST_LIGHTBLUESTONE_NAME.name">LightBlueStone Dust</entry>
+	<entry key="item.ITEM_DUST_LIGHTGRAYSTONE_NAME.name">LightGrayStone Dust</entry>
+	<entry key="item.ITEM_DUST_LIMEGREENSTONE_NAME.name">LimeGreenStone Dust</entry>
+	<entry key="item.ITEM_DUST_MAGENTASTONE_NAME.name">MagentaStone Dust</entry>
+	<entry key="item.ITEM_DUST_MAGMASTONE_NAME.name">MagmaStone Dust</entry>
+	<entry key="item.ITEM_DUST_ORANGESTONE_NAME.name">OrangeStone Dust</entry>
+	<entry key="item.ITEM_DUST_PINKSTONE_NAME.name">PinkStone Dust</entry>
+	<entry key="item.ITEM_DUST_PURPLESTONE_NAME.name">PurpleStone Dust</entry>
+	<entry key="item.ITEM_DUST_WHITESTONE_NAME.name">WhiteStone Dust</entry>
+	<entry key="item.ITEM_DUST_YELLOWSTONE_NAME.name">YellowStone Dust</entry>
 	
-	<entry key="itemGroup.RSaH.Item_Dust_BlueStone.name">Top</entry>
+	<entry key="itemGroup.RSaH">RedStone-a-Holic</entry>
 </properties>

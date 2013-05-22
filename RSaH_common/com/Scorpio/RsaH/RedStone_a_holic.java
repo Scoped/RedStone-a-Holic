@@ -4,6 +4,7 @@ import java.io.File;
 
 import net.minecraft.creativetab.CreativeTabs;
 
+import com.Scorpio.RsaH.Recipes.ModRecipes;
 import com.Scorpio.RsaH.block.ModBlocks;
 import com.Scorpio.RsaH.configuration.ConfigurationHandler;
 import com.Scorpio.RsaH.core.handler.LocalizationHandler;
@@ -53,6 +54,7 @@ public class RedStone_a_holic
 		
 		ModItems.ItemInit();
 		
+		ModRecipes.recipesInit();
 	}
 	@Init
 	public void init(FMLInitializationEvent event)

@@ -2,6 +2,9 @@ package com.Scorpio.RsaH.lib;
 
 public class ItemIDs
 {
+	/**
+	 * Item IDs
+	 */
 	public static int ITEM_DUST_BLUESTONE_ID;
 	public static int ITEM_DUST_BLACKSTONE_ID;
 	public static int ITEM_DUST_BROWNSTONE_ID;
@@ -20,6 +23,9 @@ public class ItemIDs
 	public static int ITEM_DUST_WHITESTONE_ID;
 	public static int ITEM_DUST_YELLOWSTONE_ID;
 	
+	/**
+	 * Item Default IDs
+	 */
 	public static final int ITEM_DUST_BLUESTONE_ID_DEFAULT = 3841;
 	public static final int ITEM_DUST_BLACKSTONE_ID_DEFAULT = 3842;
 	public static final int ITEM_DUST_BROWNSTONE_ID_DEFAULT = 3843;
@@ -37,4 +43,5 @@ public class ItemIDs
 	public static final int ITEM_DUST_PURPLESTONE_ID_DEFAULT = 3855;
 	public static final int ITEM_DUST_WHITESTONE_ID_DEFAULT = 3856;
 	public static final int ITEM_DUST_YELLOWSTONE_ID_DEFAULT = 3857;
+	
 }

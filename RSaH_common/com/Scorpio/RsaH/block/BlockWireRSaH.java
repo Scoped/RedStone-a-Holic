@@ -14,13 +14,13 @@ public class BlockWireRSaH extends BlockRedstoneWire
 {
 	
     @SideOnly(Side.CLIENT)
-    private Icon iconCross1; //field_94413_c
+    private Icon iconCross1;
     @SideOnly(Side.CLIENT)
-    private Icon iconLine2;//field_94410_cO
+    private Icon iconLine2;
     @SideOnly(Side.CLIENT)
-    private Icon iconCrossOverlay3;//field_94411_cP
+    private Icon iconCrossOverlay3;
     @SideOnly(Side.CLIENT)
-    private Icon iconCrossOverlay4;//field_94412_cQ
+    private Icon iconCrossOverlay4;
     
     private String IconCross;
     private String IconLine;
@@ -80,7 +80,7 @@ public class BlockWireRSaH extends BlockRedstoneWire
 	@Override
 	public void registerIcons(IconRegister register)
 	{
-		blockIcon = iconCross1;
+		//blockIcon = iconCross1;
 		iconCross1 = register.registerIcon(Reference.MOD_ID + ":" + this.getIconCross().substring(this.getIconCross().indexOf(".")+1));
 		iconLine2 = register.registerIcon(Reference.MOD_ID + ":" + this.getIconCrossOverlay().substring(this.getIconCrossOverlay().indexOf(".")+1));
 		iconCrossOverlay3 = register.registerIcon(Reference.MOD_ID + ":" + this.getIconLine().substring(this.getIconLine().indexOf(".")+1));

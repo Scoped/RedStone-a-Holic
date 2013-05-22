@@ -1,11 +1,20 @@
 package com.Scorpio.RsaH.item;
 
-import com.Scorpio.RsaH.lib.ItemIDs;
-
 import net.minecraft.item.Item;
+
+import com.Scorpio.RsaH.lib.ItemIDs;
 
 public class ModItems
 {
+	/**
+	 * Item Declaration
+	 * Count: 18
+	 */
+	
+	/**
+	 * Item-Dust Declaration
+	 * Count: 18
+	 */
 	public static Item Dust_BlueStone;
 	public static Item Dust_BlackStone;
 	public static Item Dust_BrownStone;
@@ -26,6 +35,15 @@ public class ModItems
 	
 	public static void ItemInit()
 	{
+		/**
+		 * Item
+		 * Count: 18
+		 */
+		
+		/**
+		 * Item-Dust
+		 * Count: 18
+		 */
 		Dust_BlueStone = new Item_Dust_BlueStone(ItemIDs.ITEM_DUST_BLUESTONE_ID);
 		Dust_BlackStone = new Item_Dust_BlackStone(ItemIDs.ITEM_DUST_BLACKSTONE_ID);
 		Dust_BrownStone = new Item_Dust_BrownStone(ItemIDs.ITEM_DUST_BROWNSTONE_ID);

@@ -1,11 +1,12 @@
 package com.Scorpio.RsaH.item;
 
+import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.item.Item;
+
 import com.Scorpio.RsaH.lib.Reference;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.Item;
 
 public class ItemRSaH extends Item
 {

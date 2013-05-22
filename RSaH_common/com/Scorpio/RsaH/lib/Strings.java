@@ -30,7 +30,28 @@ public class Strings
 	public static final String BLOCK_WIRE_BLUESTONE_NAME = "BlueStone Wire";
 	
 	/**
-	 * Item Names
+	 * Block-Torch Names
+	 */
+	public static final String BLOCK_TORCH_BLUESTONE_NAME = "BlueStone Torch";
+	public static final String BLOCK_TORCH_BLACKSTONE_NAME = "BlackStone Torch";
+	public static final String BLOCK_TORCH_BROWNSTONE_NAME = "BrownStone Torch";
+	public static final String BLOCK_TORCH_CYANSTONE_NAME = "CyanStone Torch";
+	public static final String BLOCK_TORCH_GLOWSTONE_NAME = "GlowStone Torch";
+	public static final String BLOCK_TORCH_GRAYSTONE_NAME = "GrayStone Torch";
+	public static final String BLOCK_TORCH_GREENSTONE_NAME = "GreenStone Torch";
+	public static final String BLOCK_TORCH_LIGHTBLUESTONE_NAME = "LightBlueStone Torch";
+	public static final String BLOCK_TORCH_LIGHTGRAYSTONE_NAME = "LightGrayStone Torch";
+	public static final String BLOCK_TORCH_LIMEGREENSTONE_NAME = "LimeGreenStone Torch";
+	public static final String BLOCK_TORCH_MAGENTASTONE_NAME = "MagentaStone Torch";
+	public static final String BLOCK_TORCH_MAGMASTONE_NAME = "MagmaStone Torch";
+	public static final String BLOCK_TORCH_ORANGESTONE_NAME = "OrangeStone Torch";
+	public static final String BLOCK_TORCH_PINKSTONE_NAME = "PinkStone Torch";
+	public static final String BLOCK_TORCH_PURPLESTONE_NAME = "PurpleStone Torch";
+	public static final String BLOCK_TORCH_WHITESTONE_NAME = "WhiteStone Torch";
+	public static final String BLOCK_TORCH_YELLOWSTONE_NAME = "YellowStone Torch";
+	
+	/**
+	 * Item-Dust Names
 	 */
 	public static final String ITEM_DUST_BLUESTONE_NAME = "BlueStone Dust";
 	public static final String ITEM_DUST_BLACKSTONE_NAME = "BlackStone Dust";
@@ -49,4 +70,5 @@ public class Strings
 	public static final String ITEM_DUST_PURPLESTONE_NAME = "PurpleStone Dust";
 	public static final String ITEM_DUST_WHITESTONE_NAME = "WhiteStone Dust";
 	public static final String ITEM_DUST_YELLOWSTONE_NAME = "YellowStone Dust";
+
 }

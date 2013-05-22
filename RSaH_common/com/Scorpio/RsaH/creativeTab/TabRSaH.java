@@ -1,12 +1,12 @@
 package com.Scorpio.RsaH.creativeTab;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
+
 import com.Scorpio.RsaH.block.ModBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemStack;
 
 public class TabRSaH extends CreativeTabs
 {

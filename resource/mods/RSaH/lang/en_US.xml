@@ -23,6 +23,9 @@
 	
 	<entry key="tile.BlueStone Wire.name">BlueStone Wire</entry>
 	
+	<entry key="tile.BlueStone Torch Idle.name">BlueStone Torch Idle</entry>
+	<entry key="tile.BlueStone Torch Active.name">BlueStone Torch</entry>
+	
 	<entry key="item.BlueStone Dust.name">BlueStone Dust</entry>
 	<entry key="item.BlackStone Dust.name">BlackStone Dust</entry>
 	<entry key="item.BrownStone Dust.name">BrownStone Dust</entry>

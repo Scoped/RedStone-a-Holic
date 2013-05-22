@@ -4,7 +4,7 @@ public class BlockIDs
 {
 	
 	/**
-	 * Block Default IDs
+	 * Block Default IDs 257 - 274
 	 */
 	public static final int BLOCK_BLUESTONE_ID_DEFAULT = 257;
 	public static final int BLOCK_BLACKSTONE_ID_DEFAULT = 258;
@@ -26,12 +26,50 @@ public class BlockIDs
 	public static final int BLOCK_STRANGESTONE_ID_DEFAULT = 274;
 	
 	/**
-	 * Block-Wire Default IDs
+	 * Block-Wire Default IDs 275 - 293
 	 */
 	public static final int BLOCK_WIRE_BLUESOTNE_ID_DEFAULT = 275;
 	
 	/**
-	 * IDs
+	 * Block-Torch Default IDs 294 - 327
+	 */
+	public static final int BLOCK_TORCH_BLUESTONEIDLE_ID_DEFAULT = 294;
+	public static final int BLOCK_TORCH_BLUESTONEACTIVE_ID_DEFAULT = 295;
+	public static final int BLOCK_TORCH_BLACKSTONEIDLE_ID_DEFAULT = 296;
+	public static final int BLOCK_TORCH_BLACKSTONEACTIVE_ID_DEFAULT = 297;
+	public static final int BLOCK_TORCH_BROWNSTONEIDLE_ID_DEFAULT = 298;
+	public static final int BLOCK_TORCH_BROWNSTONEACTIVE_ID_DEFAULT = 299;
+	public static final int BLOCK_TORCH_CYANSTONEIDLE_ID_DEFAULT = 300;
+	public static final int BLOCK_TORCH_CYANSTONEACTIVE_ID_DEFAULT = 301;
+	public static final int BLOCK_TORCH_GLOWSTONEIDLE_ID_DEFAULT = 302;
+	public static final int BLOCK_TORCH_GLOWSTONEACTIVE_ID_DEFAULT = 303;
+	public static final int BLOCK_TORCH_GRAYSTONEIDLE_ID_DEFAULT = 304;
+	public static final int BLOCK_TORCH_GRAYSTONEACTIVE_ID_DEFAULT = 305;
+	public static final int BLOCK_TORCH_GREENSTONEIDLE_ID_DEFAULT = 306;
+	public static final int BLOCK_TORCH_GREENSTONEACTIVE_ID_DEFAULT = 307;
+	public static final int BLOCK_TORCH_LIGHTBLUESTONEIDLE_ID_DEFAULT = 308;
+	public static final int BLOCK_TORCH_LIGHTBLUESTONEACTIVE_ID_DEFAULT = 309;
+	public static final int BLOCK_TORCH_LIGHTGRAYSTONEIDLE_ID_DEFAULT = 310;
+	public static final int BLOCK_TORCH_LIGHTGRAYSTONEACTIVE_ID_DEFAULT = 311;
+	public static final int BLOCK_TORCH_LIMEGREENSTONEIDLE_ID_DEFAULT = 312;
+	public static final int BLOCK_TORCH_LIMEGREENSTONEACTIVE_ID_DEFAULT = 313;
+	public static final int BLOCK_TORCH_MAGENTASTONEIDLE_ID_DEFAULT = 314;
+	public static final int BLOCK_TORCH_MAGENTASTONEACTIVE_ID_DEFAULT = 315;
+	public static final int BLOCK_TORCH_MAGMASTONEIDLE_ID_DEFAULT = 316;
+	public static final int BLOCK_TORCH_MAGMASTONEACTIVE_ID_DEFAULT = 317;
+	public static final int BLOCK_TORCH_ORANGESTONEIDLE_ID_DEFAULT = 318;
+	public static final int BLOCK_TORCH_ORANGESTONEACTIVE_ID_DEFAULT = 319;
+	public static final int BLOCK_TORCH_PINKSTONEIDLE_ID_DEFAULT = 320;
+	public static final int BLOCK_TORCH_PINKSTONEACTIVE_ID_DEFAULT = 321;
+	public static final int BLOCK_TORCH_PURPLESTONEIDLE_ID_DEFAULT = 322;
+	public static final int BLOCK_TORCH_PURPLESTONEACTIVE_ID_DEFAULT = 323;
+	public static final int BLOCK_TORCH_WHITESTONEIDLE_ID_DEFAULT = 324;
+	public static final int BLOCK_TORCH_WHITESTONEACTIVE_ID_DEFAULT = 325;
+	public static final int BLOCK_TORCH_YELLOWSTONEIDLE_ID_DEFAULT = 326;
+	public static final int BLOCK_TORCH_YELLOWSTONEACTIVE_ID_DEFAULT = 327;
+	
+	/**
+	 * Block IDs
 	 */
 	public static int BLOCK_BLUESTONE_ID;
 	public static int BLOCK_BLACKSTONE_ID;
@@ -56,5 +94,43 @@ public class BlockIDs
 	 * Block-Wire IDs
 	 */
 	public static int BLOCK_WIRE_BLUESTONE_ID;
+	
+	/**
+	 * Block-Torch IDs
+	 */
+	public static int BLOCK_TORCH_BLUESTONEIDLE_ID;
+	public static int BLOCK_TORCH_BLUESTONEACTIVE_ID;
+	public static int BLOCK_TORCH_BLACKSTONEIDLE_ID;
+	public static int BLOCK_TORCH_BLACKSTONEACTIVE_ID;
+	public static int BLOCK_TORCH_BROWNSTONEIDLE_ID;
+	public static int BLOCK_TORCH_BROWNSTONEACTIVE_ID;
+	public static int BLOCK_TORCH_CYANSTONEIDLE_ID;
+	public static int BLOCK_TORCH_CYANSTONEACTIVE_ID;
+	public static int BLOCK_TORCH_GLOWSTONEIDLE_ID;
+	public static int BLOCK_TORCH_GLOWSTONEACTIVE_ID;
+	public static int BLOCK_TORCH_GRAYSTONEIDLE_ID;
+	public static int BLOCK_TORCH_GRAYSTONEACTIVE_ID;
+	public static int BLOCK_TORCH_GREENSTONEIDLE_ID;
+	public static int BLOCK_TORCH_GREENSTONEACTIVE_ID;
+	public static int BLOCK_TORCH_LIGHTBLUESTONEIDLE_ID;
+	public static int BLOCK_TORCH_LIGHTBLUESTONEACTIVE_ID;
+	public static int BLOCK_TORCH_LIGHTGRAYSTONEIDLE_ID;
+	public static int BLOCK_TORCH_LIGHTGRAYSTONEACTIVE_ID;
+	public static int BLOCK_TORCH_LIMEGREENSTONEIDLE_ID;
+	public static int BLOCK_TORCH_LIMEGREENSTONEACTIVE_ID;
+	public static int BLOCK_TORCH_MAGENTASTONEIDLE_ID;
+	public static int BLOCK_TORCH_MAGENTASTONEACTIVE_ID;
+	public static int BLOCK_TORCH_MAGMASTONEIDLE_ID;
+	public static int BLOCK_TORCH_MAGMASTONEACTIVE_ID;
+	public static int BLOCK_TORCH_ORANGESTONEIDLE_ID;
+	public static int BLOCK_TORCH_ORANGESTONEACTIVE_ID;
+	public static int BLOCK_TORCH_PINKSTONEIDLE_ID;
+	public static int BLOCK_TORCH_PINKSTONEACTIVE_ID;
+	public static int BLOCK_TORCH_PURPLESTONEIDLE_ID;
+	public static int BLOCK_TORCH_PURPLESTONEACTIVE_ID;
+	public static int BLOCK_TORCH_WHITESTONEIDLE_ID;
+	public static int BLOCK_TORCH_WHITESTONEACTIVE_ID;
+	public static int BLOCK_TORCH_YELLOWSTONEIDLE_ID;
+	public static int BLOCK_TORCH_YELLOWSTONEACTIVE_ID;
 	
 }

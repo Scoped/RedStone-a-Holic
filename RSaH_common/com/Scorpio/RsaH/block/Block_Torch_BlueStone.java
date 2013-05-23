@@ -83,23 +83,23 @@ public class Block_Torch_BlueStone extends BlockTorchRSaH
 
             if (l == 1)
             {
-                par1World.spawnParticle("reddust", d0 - d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0 - d4, d1 + d3, d2, -1.0D, -1.0D, 1.0D);
             }
             else if (l == 2)
             {
-                par1World.spawnParticle("reddust", d0 + d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0 + d4, d1 + d3, d2, -1.0D, -1.0D, 1.0D);
             }
             else if (l == 3)
             {
-                par1World.spawnParticle("reddust", d0, d1 + d3, d2 - d4, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0, d1 + d3, d2 - d4, -1.0D, -1.0D, 1.0D);
             }
             else if (l == 4)
             {
-                par1World.spawnParticle("reddust", d0, d1 + d3, d2 + d4, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0, d1 + d3, d2 + d4, -1.0D, -1.0D, 1.0D);
             }
             else
             {
-                par1World.spawnParticle("reddust", d0, d1, d2, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0, d1, d2, -1.0D, -1.0D, 1.0D);// Red, Green, Blue
             }
         }
     }
@@ -141,7 +141,7 @@ public class Block_Torch_BlueStone extends BlockTorchRSaH
                     double d0 = (double)par2 + par5Random.nextDouble() * 0.6D + 0.2D;
                     double d1 = (double)par3 + par5Random.nextDouble() * 0.6D + 0.2D;
                     double d2 = (double)par4 + par5Random.nextDouble() * 0.6D + 0.2D;
-                    par1World.spawnParticle("smoke", d0, d1, d2, 0.0D, 0.0D, 0.0D);
+                    par1World.spawnParticle("smoke", d0, d1, d2, -1.0D, -1.0D, 1.0D);
                 }
             }
         }

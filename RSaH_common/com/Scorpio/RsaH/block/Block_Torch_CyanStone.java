@@ -83,23 +83,23 @@ public class Block_Torch_CyanStone extends BlockTorchRSaH
 
             if (l == 1)
             {
-                par1World.spawnParticle("reddust", d0 - d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0 - d4, d1 + d3, d2, -1.0D, 0.7D, 1.0D);
             }
             else if (l == 2)
             {
-                par1World.spawnParticle("reddust", d0 + d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0 + d4, d1 + d3, d2, -1.0D, 0.7D, 1.0D);
             }
             else if (l == 3)
             {
-                par1World.spawnParticle("reddust", d0, d1 + d3, d2 - d4, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0, d1 + d3, d2 - d4, -1.0D, 0.7D, 1.0D);
             }
             else if (l == 4)
             {
-                par1World.spawnParticle("reddust", d0, d1 + d3, d2 + d4, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0, d1 + d3, d2 + d4, -1.0D, 0.7D, 1.0D);
             }
             else
             {
-                par1World.spawnParticle("reddust", d0, d1, d2, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0, d1, d2, -1.0D, 0.7D, 1.0D);
             }
         }
     }

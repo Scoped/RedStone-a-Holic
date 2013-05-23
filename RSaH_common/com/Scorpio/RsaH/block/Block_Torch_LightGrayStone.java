@@ -24,8 +24,8 @@ public class Block_Torch_LightGrayStone extends BlockTorchRSaH
 	{
 		super(id, isLite);
         this.isTorchActive = isLite;
-        this.setIconTorchLit("LightBlueStone_Torch_Lit");
-        this.setIconTorch("LightBlueStone_Torch");
+        this.setIconTorchLit("LightGrayStone_Torch_Lit");
+        this.setIconTorch("LightGrayStone_Torch");
         this.setTickRandomly(true);
         this.setCreativeTab((CreativeTabs)null);
 		this.setUnlocalizedName(Strings.BLOCK_TORCH_LIGHTGRAYSTONE_NAME);
@@ -83,23 +83,23 @@ public class Block_Torch_LightGrayStone extends BlockTorchRSaH
 
             if (l == 1)
             {
-                par1World.spawnParticle("reddust", d0 - d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0 - d4, d1 + d3, d2, 0.7D, 0.7D, 0.7D);
             }
             else if (l == 2)
             {
-                par1World.spawnParticle("reddust", d0 + d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0 + d4, d1 + d3, d2, 0.7D, 0.7D, 0.7D);
             }
             else if (l == 3)
             {
-                par1World.spawnParticle("reddust", d0, d1 + d3, d2 - d4, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0, d1 + d3, d2 - d4, 0.7D, 0.7D, 0.7D);
             }
             else if (l == 4)
             {
-                par1World.spawnParticle("reddust", d0, d1 + d3, d2 + d4, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0, d1 + d3, d2 + d4, 0.7D, 0.7D, 0.7D);
             }
             else
             {
-                par1World.spawnParticle("reddust", d0, d1, d2, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0, d1, d2, 0.7D, 0.7D, 0.7D);
             }
         }
     }

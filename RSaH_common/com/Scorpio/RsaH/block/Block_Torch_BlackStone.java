@@ -30,7 +30,7 @@ public class Block_Torch_BlackStone extends BlockTorchRSaH
         this.setCreativeTab((CreativeTabs)null);
 		this.setUnlocalizedName(Strings.BLOCK_TORCH_BLACKSTONE_NAME);
 	}
-	
+	//NOTE: TURNS SIGNALS OFF
 	private boolean checkForBurnout(World par1World, int par2, int par3, int par4, boolean par5)
     {
         if (!blackstoneUpdateInfoCache.containsKey(par1World))
@@ -83,23 +83,23 @@ public class Block_Torch_BlackStone extends BlockTorchRSaH
 
             if (l == 1)
             {
-                par1World.spawnParticle("reddust", d0 - d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0 - d4, d1 + d3, d2, -0.5D, -0.5D, -0.5D);
             }
             else if (l == 2)
             {
-                par1World.spawnParticle("reddust", d0 + d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0 + d4, d1 + d3, d2, -0.5D, -0.5D, -0.5D);
             }
             else if (l == 3)
             {
-                par1World.spawnParticle("reddust", d0, d1 + d3, d2 - d4, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0, d1 + d3, d2 - d4, -0.5D, -0.5D, -0.5D);
             }
             else if (l == 4)
             {
-                par1World.spawnParticle("reddust", d0, d1 + d3, d2 + d4, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0, d1 + d3, d2 + d4, -0.5D, -0.5D, -0.5D);
             }
             else
             {
-                par1World.spawnParticle("reddust", d0, d1, d2, 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", d0, d1, d2, -0.5D, -0.5D, -0.5D);
             }
         }
     }

@@ -8,9 +8,9 @@ import net.minecraft.block.material.Material;
 import com.Scorpio.RsaH.RedStone_a_holic;
 import com.Scorpio.RsaH.lib.Strings;
 
-public class Block_BlueStone extends BlockRSaH
+public class Block_Mineral_BlueStone extends BlockRSaH
 {
-	public Block_BlueStone(int id)
+	public Block_Mineral_BlueStone(int id)
 	{
 		super(id, Material.rock);
 		this.setCreativeTab(RedStone_a_holic.TabRSaH);

@@ -13,7 +13,7 @@ public class ModBlocks
 	
 	/**
 	 * Block Declaration
-	 * Count: 37
+	 * Count: 70
 	 */
 	
 	/**
@@ -41,14 +41,29 @@ public class ModBlocks
 	
 	/**
 	 * Block-Wire Declaration
-	 * Count: 1
+	 * Count: 17
 	 */
 	public static Block BlueStoneWireBlock;
+	public static Block BlackStoneWireBlock;
+	public static Block BrownStoneWireBlock;
+	public static Block CyanStoneWireBlock;
+	public static Block GlowStoneWireBlock;
+	public static Block GrayStoneWireBlock;
+	public static Block GreenStoneWireBlock;
+	public static Block LightBlueStoneWireBlock;
+	public static Block LightGrayStoneWireBlock;
+	public static Block LimeGreenStoneWireBlock;
+	public static Block MagentaStoneWireBlock;
+	public static Block OrangeStoneWireBlock;
+	public static Block PinkStoneWireBlock;
+	public static Block PurpleStoneWireBlock;
+	public static Block WhiteStoneWireBlock;
+	public static Block YellowStoneWireBlock;
+	public static Block MagmaStoneWireBlock;
 	
 	/**
 	 * Block-Torch Declaration
-	 * Count: 18
-	 * Idle and Active Count: 36
+	 * Count: 34
 	 */
     public static Block BlueStoneTorchIdle;
     public static Block BlueStoneTorchActive;
@@ -89,7 +104,7 @@ public class ModBlocks
 	{
 		/**
 		 * Block
-		 * Count: 19
+		 * Count: 70
 		 */
 		
 		/**
@@ -103,13 +118,13 @@ public class ModBlocks
 		GlowStoneBlock = new Block_Mineral_GlowStone(BlockIDs.BLOCK_GLOWSTONE_ID);
 		GrayStoneBlock = new Block_Mineral_GrayStone(BlockIDs.BLOCK_GREYSTONE_ID);
 		GreenStoneBlock = new Block_Mineral_GreenStone(BlockIDs.BLOCK_GREENSTONE_ID);
-		LightBlueStoneBlock = new Block_Mineral_LightBlueStone(BlockIDs.BLOCK_LIGHTSTONE_ID);
-		LightGrayStoneBlock = new Block_Mineral_LightGrayStone(BlockIDs.BLOCK_LIGHTGRAYTONE_ID);
+		LightBlueStoneBlock = new Block_Mineral_LightBlueStone(BlockIDs.BLOCK_LIGHTBLUESTONE_ID);
+		LightGrayStoneBlock = new Block_Mineral_LightGrayStone(BlockIDs.BLOCK_LIGHTGRAYSTONE_ID);
 		LimeGreenStoneBlock = new Block_Mineral_LimeGreenStone(BlockIDs.BLOCK_LIMEGREENSTONE_ID);
 		MagentaStoneBlock = new Block_Mineral_MagentaStone(BlockIDs.BLOCK_MAGENTASTONE_ID);
 		OrangeStoneBlock = new Block_Mineral_OrangeStone(BlockIDs.BLOCK_ORANGESTONE_ID);
 		PinkStoneBlock = new Block_Mineral_PinkStone(BlockIDs.BLOCK_PINKSTONE_ID);
-		PurpleStoneBlock = new Block_Mineral_PurpleStone(BlockIDs.BLOCK_PURPLESTONE);
+		PurpleStoneBlock = new Block_Mineral_PurpleStone(BlockIDs.BLOCK_PURPLESTONE_ID);
 		WhiteStoneBlock = new Block_Mineral_WhiteStone(BlockIDs.BLOCK_WHITESTONE_ID);
 		YellowStoneBlock = new Block_Mineral_YellowStone(BlockIDs.BLOCK_YELLOWSTONE_ID);
 		MagmaStoneBlock = new Block_Mineral_MagmaStone(BlockIDs.BLOCK_MAGMASTONE_ID);
@@ -117,13 +132,29 @@ public class ModBlocks
 		
 		/**
 		 * Block-Wire
-		 * Count: 1
+		 * Count: 17
 		 */
 		BlueStoneWireBlock = new Block_Wire_BlueStone(BlockIDs.BLOCK_WIRE_BLUESTONE_ID);
+		BlackStoneWireBlock = new Block_Wire_BlackStone(BlockIDs.BLOCK_WIRE_BLACKSTONE_ID);
+		BrownStoneWireBlock = new Block_Wire_BrownStone(BlockIDs.BLOCK_WIRE_BROWNSTONE_ID);
+		CyanStoneWireBlock = new Block_Wire_CyanStone(BlockIDs.BLOCK_WIRE_CYANSTONE_ID);
+		GlowStoneWireBlock = new Block_Wire_GlowStone(BlockIDs.BLOCK_WIRE_GLOWSTONE_ID);
+		GrayStoneWireBlock = new Block_Wire_GrayStone(BlockIDs.BLOCK_WIRE_GRAYSTONE_ID);
+		GreenStoneWireBlock = new Block_Wire_GreenStone(BlockIDs.BLOCK_WIRE_GREENSTONE_ID);
+		LightBlueStoneWireBlock = new Block_Wire_LightBlueStone(BlockIDs.BLOCK_WIRE_LIGHTBLUESTONE_ID);
+		LightGrayStoneWireBlock = new Block_Wire_LightGrayStone(BlockIDs.BLOCK_WIRE_LIGHTGRAYSTONE_ID);
+		LimeGreenStoneWireBlock = new Block_Wire_LimeGreenStone(BlockIDs.BLOCK_WIRE_LIMEGREENSTONE_ID);
+		MagentaStoneWireBlock = new Block_Wire_MagentaStone(BlockIDs.BLOCK_WIRE_MAGENTASTONE_ID);
+		OrangeStoneWireBlock = new Block_Wire_OrangeStone(BlockIDs.BLOCK_WIRE_ORANGESTONE_ID);
+		PinkStoneWireBlock = new Block_Wire_PinkStone(BlockIDs.BLOCK_WIRE_PINKSTONE_ID);
+		PurpleStoneWireBlock = new Block_Wire_PurpleStone(BlockIDs.BLOCK_WIRE_PURPLESTONE_ID);
+		WhiteStoneWireBlock = new Block_Wire_WhiteStone(BlockIDs.BLOCK_WIRE_WHITESTONE_ID);
+		YellowStoneWireBlock = new Block_Wire_YellowStone(BlockIDs.BLOCK_WIRE_YELLOWSTONE_ID);
+		MagmaStoneWireBlock = new Block_Wire_MagmaStone(BlockIDs.BLOCK_WIRE_MAGMASTONE_ID);
 		
 		/**
 		 * Block-Torch
-		 * Count: 2
+		 * Count: 34
 		 */
 		BlueStoneTorchIdle = new Block_Torch_BlueStone(BlockIDs.BLOCK_TORCH_BLUESTONEIDLE_ID, false);
 		BlueStoneTorchActive = new Block_Torch_BlueStone(BlockIDs.BLOCK_TORCH_BLUESTONEACTIVE_ID, true).setLightValue(0.5F).setCreativeTab(RedStone_a_holic.TabRSaH);
@@ -162,7 +193,7 @@ public class ModBlocks
 		
 		/**
 		 * Block GameRegistry
-		 * Count: 36
+		 * Count: 52
 		 */
 		
 		/**
@@ -190,56 +221,40 @@ public class ModBlocks
 		
 		/**
 		 * Block-Torch GameRegistry
-		 * Count: 18
+		 * Count: 34
 		 */
 		GameRegistry.registerBlock(BlueStoneTorchActive, Strings.BLOCK_TORCH_BLUESTONE_NAME);
 		GameRegistry.registerBlock(BlueStoneTorchIdle, Strings.BLOCK_TORCH_BLUESTONE2_NAME);
-		
 		GameRegistry.registerBlock(BlackStoneTorchActive, Strings.BLOCK_TORCH_BLACKSTONE_NAME);
 		GameRegistry.registerBlock(BlackStoneTorchIdle, Strings.BLOCK_TORCH_BLACKSTONE2_NAME);
-		
 		GameRegistry.registerBlock(BrownStoneTorchActive, Strings.BLOCK_TORCH_BROWNSTONE_NAME);
 		GameRegistry.registerBlock(BrownStoneTorchIdle, Strings.BLOCK_TORCH_BROWNSTONE2_NAME);
-		
 		GameRegistry.registerBlock(CyanStoneTorchActive, Strings.BLOCK_TORCH_CYANSTONE_NAME);
 		GameRegistry.registerBlock(CyanStoneTorchIdle, Strings.BLOCK_TORCH_CYANSTONE2_NAME);
-		
 		GameRegistry.registerBlock(GlowStoneTorchActive, Strings.BLOCK_TORCH_GLOWSTONE_NAME);
 		GameRegistry.registerBlock(GlowStoneTorchIdle, Strings.BLOCK_TORCH_GLOWSTONE2_NAME);
-		
 		GameRegistry.registerBlock(GrayStoneTorchActive, Strings.BLOCK_TORCH_GRAYSTONE_NAME);
 		GameRegistry.registerBlock(GrayStoneTorchIdle, Strings.BLOCK_TORCH_GRAYSTONE2_NAME);
-		
 		GameRegistry.registerBlock(GreenStoneTorchActive, Strings.BLOCK_TORCH_GREENSTONE_NAME);
 		GameRegistry.registerBlock(GreenStoneTorchIdle, Strings.BLOCK_TORCH_GREENSTONE2_NAME);
-		
 		GameRegistry.registerBlock(LightBlueStoneTorchActive, Strings.BLOCK_TORCH_LIGHTBLUESTONE_NAME);
 		GameRegistry.registerBlock(LightBlueStoneTorchIdle, Strings.BLOCK_TORCH_LIGHTBLUESTONE2_NAME);
-		
 		GameRegistry.registerBlock(LightGrayStoneTorchActive, Strings.BLOCK_TORCH_LIGHTGRAYSTONE_NAME);
 		GameRegistry.registerBlock(LightGrayStoneTorchIdle, Strings.BLOCK_TORCH_LIGHTGRAYSTONE2_NAME);
-		
 		GameRegistry.registerBlock(LimeGreenStoneTorchActive, Strings.BLOCK_TORCH_LIMEGREENSTONE_NAME);
 		GameRegistry.registerBlock(LimeGreenStoneTorchIdle, Strings.BLOCK_TORCH_LIMEGREENSTONE2_NAME);
-		
 		GameRegistry.registerBlock(MagentaStoneTorchActive, Strings.BLOCK_TORCH_MAGENTASTONE_NAME);
 		GameRegistry.registerBlock(MagentaStoneTorchIdle, Strings.BLOCK_TORCH_MAGENTASTONE2_NAME);
-		
 		GameRegistry.registerBlock(OrangeStoneTorchActive, Strings.BLOCK_TORCH_ORANGESTONE_NAME);
 		GameRegistry.registerBlock(OrangeStoneTorchIdle, Strings.BLOCK_TORCH_ORANGESTONE2_NAME);
-		
 		GameRegistry.registerBlock(PinkStoneTorchActive, Strings.BLOCK_TORCH_PINKSTONE_NAME);
 		GameRegistry.registerBlock(PinkStoneTorchIdle, Strings.BLOCK_TORCH_PINKSTONE2_NAME);
-		
 		GameRegistry.registerBlock(PurpleStoneTorchActive, Strings.BLOCK_TORCH_PURPLESTONE_NAME);
 		GameRegistry.registerBlock(PurpleStoneTorchIdle, Strings.BLOCK_TORCH_PURPLESTONE2_NAME);
-		
 		GameRegistry.registerBlock(WhiteStoneTorchActive, Strings.BLOCK_TORCH_WHITESTONE_NAME);
 		GameRegistry.registerBlock(WhiteStoneTorchIdle, Strings.BLOCK_TORCH_WHITESTONE2_NAME);
-		
 		GameRegistry.registerBlock(YellowStoneTorchActive, Strings.BLOCK_TORCH_YELLOWSTONE_NAME);
 		GameRegistry.registerBlock(YellowStoneTorchIdle, Strings.BLOCK_TORCH_YELLOWSTONE2_NAME);
-		
 		GameRegistry.registerBlock(MagmaStoneTorchActive, Strings.BLOCK_TORCH_MAGMASTONE_NAME);
 		GameRegistry.registerBlock(MagmaStoneTorchIdle, Strings.BLOCK_TORCH_MAGMASTONE2_NAME);
 		

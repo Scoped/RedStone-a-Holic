@@ -6,6 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.Scorpio.RsaH.RedStone_a_holic;
+import com.Scorpio.RsaH.block.ModBlocks;
 import com.Scorpio.RsaH.lib.Strings;
 
 public class Item_Dust_PurpleStone extends ItemRSaH
@@ -67,10 +68,10 @@ public class Item_Dust_PurpleStone extends ItemRSaH
         }
         else
         {
-            if (Block.redstoneWire.canPlaceBlockAt(par3World, par4, par5, par6))
+            if (ModBlocks.PurpleStoneWireBlock.canPlaceBlockAt(par3World, par4, par5, par6))
             {
                 --par1ItemStack.stackSize;
-                par3World.setBlock(par4, par5, par6, Block.redstoneWire.blockID);
+                par3World.setBlock(par4, par5, par6, ModBlocks.PurpleStoneWireBlock.blockID);
             }
 
             return true;

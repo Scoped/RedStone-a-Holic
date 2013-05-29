@@ -14,13 +14,13 @@ public class BlockWireRSaH extends BlockRedstoneWire
 {
 	
     @SideOnly(Side.CLIENT)
-    private Icon iconCross1;
+    private static Icon iconCross;
     @SideOnly(Side.CLIENT)
-    private Icon iconLine2;
+    private static Icon iconLine;
     @SideOnly(Side.CLIENT)
-    private Icon iconCrossOverlay3;
+    private static Icon iconCrossOverlay;
     @SideOnly(Side.CLIENT)
-    private Icon iconCrossOverlay4;
+    private static Icon iconLineOverlay;
     
     private String IconCross;
     private String IconLine;
@@ -80,10 +80,16 @@ public class BlockWireRSaH extends BlockRedstoneWire
 	@Override
 	public void registerIcons(IconRegister register)
 	{
-		//blockIcon = iconCross1;
-		iconCross1 = register.registerIcon(Reference.MOD_ID + ":" + this.getIconCross().substring(this.getIconCross().indexOf(".")+1));
-		iconLine2 = register.registerIcon(Reference.MOD_ID + ":" + this.getIconCrossOverlay().substring(this.getIconCrossOverlay().indexOf(".")+1));
-		iconCrossOverlay3 = register.registerIcon(Reference.MOD_ID + ":" + this.getIconLine().substring(this.getIconLine().indexOf(".")+1));
-		iconCrossOverlay4 = register.registerIcon(Reference.MOD_ID + ":" + this.getIconLineOverlay().substring(this.getIconLineOverlay().indexOf(".")+1));
+		iconCross = register.registerIcon(Reference.MOD_ID + ":" + this.getIconCross().substring(this.getIconCross().indexOf(".")+1));
+		iconLine = register.registerIcon(Reference.MOD_ID + ":" + this.getIconCrossOverlay().substring(this.getIconCrossOverlay().indexOf(".")+1));
+		iconCrossOverlay = register.registerIcon(Reference.MOD_ID + ":" + this.getIconLine().substring(this.getIconLine().indexOf(".")+1));
+		iconLineOverlay = register.registerIcon(Reference.MOD_ID + ":" + this.getIconLineOverlay().substring(this.getIconLineOverlay().indexOf(".")+1));
+		this.blockIcon = this.iconCross;
 	}
+	
+    @SideOnly(Side.CLIENT)
+    public Icon icon(String par0Str)
+    {
+        return par0Str == this.getIconCross() ? BlockWireRSaH.iconCross : (par0Str == this.getIconLine() ? BlockWireRSaH.iconLine : (par0Str == this.getIconCrossOverlay() ? BlockWireRSaH.iconCrossOverlay : (par0Str == this.getIconLineOverlay() ? BlockWireRSaH.iconLineOverlay : null)));
+    }
 }

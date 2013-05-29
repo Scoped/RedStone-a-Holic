@@ -1,19 +1,20 @@
 [
 {
   "modid": "RSaH",
-  "name": "RedStone-a-Holic",
-  "description": "Just can't live without it...",
-  "version": "",
+  "name": "RedStone-A-Holic",
+  "description": "Never too much redstone!",
+  "version": "0.0.1",
   "url": "",
   "updateUrl": "",
   "authorList": [
-    "CraftedScorpio",
-    "Shad0w_Phant0m"
+    "Scorpio"
   ],
   "credits": "",
   "logoFile": "",
-  "screenshots": [],
+  "screenshots": [
+  ],
   "parent":"",
-  "dependencies": ""[]
+  "dependencies": [
+  ]
 }
 ]

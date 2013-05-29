@@ -3,7 +3,6 @@ package com.Scorpio.RsaH.block;
 import java.util.Random;
 
 import net.minecraft.util.Direction;
-import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
@@ -13,27 +12,17 @@ import com.Scorpio.RsaH.lib.Strings;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class Block_Wire_BlueStone extends BlockWireRSaH
+public class Block_Wire_YellowStone extends BlockWireRSaH
 {
     
-    @SideOnly(Side.CLIENT)
-    static Icon iconCross;
-    @SideOnly(Side.CLIENT)
-    static Icon iconLine;
-    @SideOnly(Side.CLIENT)
-    static Icon iconCrossOverlay;
-    @SideOnly(Side.CLIENT)
-    static Icon iconLineOverlay;
-	
-	public Block_Wire_BlueStone(int id)
+	public Block_Wire_YellowStone(int id)
 	{
 		super(id);
-		this.setUnlocalizedName(Strings.BLOCK_WIRE_BLUESTONE_NAME);
-		this.enableStats = false;
-		this.setIconCross("BlueStoneDust_Cross");
-		this.setIconCrossOverlay("BlueStoneDust_Cross_Overlay");
-		this.setIconLine("BlueStoneDust_Line");
-		this.setIconLineOverlay("BlueStoneDust_Line_Overlay");
+		this.setUnlocalizedName(Strings.BLOCK_WIRE_YELLOWSTONE_NAME);
+		this.setIconCross("YellowStoneDust_Cross");
+		this.setIconCrossOverlay("YellowStoneDust_Cross_Overlay");
+		this.setIconLine("YellowStoneDust_Line");
+		this.setIconLineOverlay("YellowStoneDust_Line_Overlay");
 	}
 	
     @SideOnly(Side.CLIENT)
@@ -44,14 +33,6 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
     public int colorMultiplier(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)
     {
         return 333399;
-    }
-    
-    /**
-     * The type of render function that is called for this block
-     */
-    public int getRenderType()
-    {
-        return 5;
     }
     
     /**
@@ -66,7 +47,7 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
             double d0 = (double)par2 + 0.5D + ((double)par5Random.nextFloat() - 0.5D) * 0.2D;
             double d1 = (double)((float)par3 + 0.0625F);
             double d2 = (double)par4 + 0.5D + ((double)par5Random.nextFloat() - 0.5D) * 0.2D;
-            float f = (float)l / 15.0F;
+            float f = (float)l / -1.0F;
             float f1 = f * -1.0F + -1.0F;
 
             if (l == 0)
@@ -79,12 +60,12 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
 
             if (f2 < 0.0F)
             {
-                f2 = 1.0F;
+                f2 = 0.0F;
             }
 
             if (f3 < 0.0F)
             {
-                f3 = 1.0F;
+                f3 = 0.0F;
             }
 
             par1World.spawnParticle("reddust", d0, d1, d2, (double)f1, (double)f2, (double)f3);
@@ -93,7 +74,7 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
     
     public int idDropped(int par1, Random par2Random, int par3)
     {
-        return ModItems.Dust_BlueStone.itemID;
+        return ModItems.Dust_YellowStone.itemID;
     }
     
     /**
@@ -104,7 +85,7 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
     {
         int i1 = par0IBlockAccess.getBlockId(par1, par2, par3);
 
-        if (i1 != ModBlocks.BlueStoneWireBlock.blockID)
+        if (i1 != ModBlocks.YellowStoneWireBlock.blockID)
         {
             return false;
         }
@@ -112,7 +93,7 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
         {
             return true;
         }
-        /*else if (!ModBlocks.bluestoneRepeaterIdle.func_94487_f(i1))
+        /*else if (!ModBlocks.BrownStoneRepeaterIdle.func_94487_f(i1))
         {
             return (Block.blocksList[i1] != null && Block.blocksList[i1].canConnectRedstone(par0IBlockAccess, par1, par2, par3, par4));
         }*/
@@ -127,7 +108,7 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
     {
         int i1 = par0IBlockAccess.getBlockId(par1, par2, par3);
 
-        if (i1 != ModBlocks.BlueStoneTorchActive.blockID)
+        if (i1 != ModBlocks.YellowStoneTorchActive.blockID)
         {
             return false;
         }
@@ -157,7 +138,7 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
         {
             int i1 = par0IBlockAccess.getBlockId(par1, par2, par3);
 
-            if (i1 == Block.bluestoneRepeaterActive.blockID)
+            if (i1 == Block.CyanStoneRepeaterActive.blockID)
             {
                 int j1 = par0IBlockAccess.getBlockMetadata(par1, par2, par3);
                 return par4 == (j1 & 3);
@@ -174,7 +155,7 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
      */
     public int idPicked(World par1World, int par2, int par3, int par4)
     {
-        return ModItems.Dust_BlueStone.itemID;
+        return ModItems.Dust_YellowStone.itemID;
     }
-
+    
 }

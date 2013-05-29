@@ -28,6 +28,22 @@ public class Strings
 	 * Block-Wire Names
 	 */
 	public static final String BLOCK_WIRE_BLUESTONE_NAME = "BlueStone Wire";
+	public static final String BLOCK_WIRE_BLACKSTONE_NAME = "BlackStone Wire";
+	public static final String BLOCK_WIRE_BROWNSTONE_NAME = "BrownStone Wire";
+	public static final String BLOCK_WIRE_CYANSTONE_NAME = "CyanStone Wire";
+	public static final String BLOCK_WIRE_GLOWSTONE_NAME = "GlowStone Wire";
+	public static final String BLOCK_WIRE_GRAYSTONE_NAME = "GrayStone Wire";
+	public static final String BLOCK_WIRE_GREENSTONE_NAME = "GreenStone Wire";
+	public static final String BLOCK_WIRE_LIGHTBLUESTONE_NAME = "LightBlueStone Wire";
+	public static final String BLOCK_WIRE_LIGHTGRAYSTONE_NAME = "LightGrayStone Wire";
+	public static final String BLOCK_WIRE_LIMEGREENSTONE_NAME = "LimeGreenStone Wire";
+	public static final String BLOCK_WIRE_MAGENTASTONE_NAME = "MagentaStone Wire";
+	public static final String BLOCK_WIRE_ORANGESTONE_NAME = "OrangeStone Wire";
+	public static final String BLOCK_WIRE_PINKSTONE_NAME = "PinkStone Wire";
+	public static final String BLOCK_WIRE_PURPLESTONE_NAME = "PurpleStone Wire";
+	public static final String BLOCK_WIRE_WHITESTONE_NAME = "WhiteStone Wire";
+	public static final String BLOCK_WIRE_YELLOWSTONE_NAME = "YellowStone Wire";
+	public static final String BLOCK_WIRE_MAGMASTONE_NAME = "MagmaStone Wire";
 	
 	/**
 	 * Block-Torch Names

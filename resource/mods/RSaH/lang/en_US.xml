@@ -22,6 +22,22 @@
 	<entry key="tile.StrangeStone Block.name">StrangeStone Block</entry>
 	
 	<entry key="tile.BlueStone Wire.name">BlueStone Wire</entry>
+	<entry key="tile.BlackStone Wire.name">BlackStone Wire</entry>
+	<entry key="tile.BrownStone Wire.name">BrownStone Wire</entry>
+	<entry key="tile.CyanStone Wire.name">CyanStone Wire</entry>
+	<entry key="tile.GlowStone Wire.name">GlowStone Wire</entry>
+	<entry key="tile.GrayStone Wire.name">GrayStone Wire</entry>
+	<entry key="tile.GreenStone Wire.name">GreenStone Wire</entry>
+	<entry key="tile.LightBlueStone Wire.name">LightBlueStone Wire</entry>
+	<entry key="tile.LightGrayStone Wire.name">LightGrayStone Wire</entry>
+	<entry key="tile.LimeGreenStone Wire.name">LimeGreenStone Wire</entry>
+	<entry key="tile.MagentaStone Wire.name">MagentaStone Wire</entry>
+	<entry key="tile.OrangeStone Wire.name">OrangeStone Wire</entry>
+	<entry key="tile.PinkStone Wire.name">PinkStone Wire</entry>
+	<entry key="tile.PurpleStone Wire.name">PurpleStone Wire</entry>
+	<entry key="tile.WhiteStone Wire.name">WhiteStone Wire</entry>
+	<entry key="tile.YellowStone Wire.name">YellowStone Wire</entry>
+	<entry key="tile.MagmaStone Wire.name">MagmaStone Wire</entry>
 	
 	<entry key="tile.BlueStone Torch Idle.name">BlueStone Torch Idle</entry>
 	<entry key="tile.BlueStone Torch.name">BlueStone Torch</entry>

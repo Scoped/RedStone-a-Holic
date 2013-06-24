@@ -1,4 +1,4 @@
-package com.Scorpio.RsaH.Recipes;
+package com.Scorpio.RsaH.recipes;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

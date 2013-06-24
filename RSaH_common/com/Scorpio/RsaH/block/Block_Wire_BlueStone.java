@@ -1,9 +1,15 @@
 package com.Scorpio.RsaH.block;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
+import net.minecraft.block.Block;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Icon;
+import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
@@ -15,7 +21,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class Block_Wire_BlueStone extends BlockWireRSaH
 {
-    
+    /**
+     * When false, power transmission methods do not look at other redstone wires. Used internally during
+     * updateCurrentStrength.
+     */
+    private boolean wiresProvidePower = true;
+    private Set blocksNeedingUpdate = new HashSet();
     @SideOnly(Side.CLIENT)
     static Icon iconCross;
     @SideOnly(Side.CLIENT)
@@ -24,16 +35,16 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
     static Icon iconCrossOverlay;
     @SideOnly(Side.CLIENT)
     static Icon iconLineOverlay;
-	
+    
 	public Block_Wire_BlueStone(int id)
 	{
 		super(id);
 		this.setUnlocalizedName(Strings.BLOCK_WIRE_BLUESTONE_NAME);
 		this.enableStats = false;
-		this.setIconCross("BlueStoneDust_Cross");
-		this.setIconCrossOverlay("BlueStoneDust_Cross_Overlay");
-		this.setIconLine("BlueStoneDust_Line");
-		this.setIconLineOverlay("BlueStoneDust_Line_Overlay");
+		//this.setIconCross("BlueStoneDust_Cross");
+		//this.setIconCrossOverlay("BlueStoneDust_Cross_Overlay");
+		//this.setIconLine("BlueStoneDust_Line");
+		//this.setIconLineOverlay("BlueStoneDust_Line_Overlay");
 	}
 	
     @SideOnly(Side.CLIENT)
@@ -49,10 +60,10 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
     /**
      * The type of render function that is called for this block
      */
-    public int getRenderType()
-    {
-        return 5;
-    }
+	public int getRenderType()
+	{
+		return ModBlocks.modelWireID;
+	}
     
     /**
      * A randomly called display update to be able to add particles or other items for display
@@ -170,11 +181,238 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
     }*/
     
     /**
+     * Returns the current strength at the specified block if it is greater than the passed value, or the passed value
+     * otherwise. Signature: (world, x, y, z, strength)
+     */
+    private int getMaxCurrentStrength(World par1World, int par2, int par3, int par4, int par5)
+    {
+        if (par1World.getBlockId(par2, par3, par4) != this.blockID)
+        {
+            return par5;
+        }
+        else
+        {
+            int i1 = par1World.getBlockMetadata(par2, par3, par4);
+            return i1 > par5 ? i1 : par5;
+        }
+    }
+    
+    /**
+     * Sets the strength of the wire current (0-15) for this block based on neighboring blocks and propagates to
+     * neighboring redstone wires
+     */
+    private void updateAndPropagateCurrentStrength(World par1World, int par2, int par3, int par4)
+    {
+        this.calculateCurrentChanges(par1World, par2, par3, par4, par2, par3, par4);
+        ArrayList arraylist = new ArrayList(this.blocksNeedingUpdate);
+        this.blocksNeedingUpdate.clear();
+
+        for (int l = 0; l < arraylist.size(); ++l)
+        {
+            ChunkPosition chunkposition = (ChunkPosition)arraylist.get(l);
+            par1World.notifyBlocksOfNeighborChange(chunkposition.x, chunkposition.y, chunkposition.z, this.blockID);
+        }
+    }
+    
+    private void calculateCurrentChanges(World par1World, int par2, int par3, int par4, int par5, int par6, int par7)
+    {
+        int k1 = par1World.getBlockMetadata(par2, par3, par4);
+        byte b0 = 0;
+        int l1 = this.getMaxCurrentStrength(par1World, par5, par6, par7, b0);
+        this.wiresProvidePower = false;
+        int i2 = par1World.getStrongestIndirectPower(par2, par3, par4);
+        this.wiresProvidePower = true;
+
+        if (i2 > 0 && i2 > l1 - 1)
+        {
+            l1 = i2;
+        }
+
+        int j2 = 0;
+
+        for (int k2 = 0; k2 < 4; ++k2)
+        {
+            int l2 = par2;
+            int i3 = par4;
+
+            if (k2 == 0)
+            {
+                l2 = par2 - 1;
+            }
+
+            if (k2 == 1)
+            {
+                ++l2;
+            }
+
+            if (k2 == 2)
+            {
+                i3 = par4 - 1;
+            }
+
+            if (k2 == 3)
+            {
+                ++i3;
+            }
+
+            if (l2 != par5 || i3 != par7)
+            {
+                j2 = this.getMaxCurrentStrength(par1World, l2, par3, i3, j2);
+            }
+
+            if (par1World.isBlockNormalCube(l2, par3, i3) && !par1World.isBlockNormalCube(par2, par3 + 1, par4))
+            {
+                if ((l2 != par5 || i3 != par7) && par3 >= par6)
+                {
+                    j2 = this.getMaxCurrentStrength(par1World, l2, par3 + 1, i3, j2);
+                }
+            }
+            else if (!par1World.isBlockNormalCube(l2, par3, i3) && (l2 != par5 || i3 != par7) && par3 <= par6)
+            {
+                j2 = this.getMaxCurrentStrength(par1World, l2, par3 - 1, i3, j2);
+            }
+        }
+
+        if (j2 > l1)
+        {
+            l1 = j2 - 1;
+        }
+        else if (l1 > 0)
+        {
+            --l1;
+        }
+        else
+        {
+            l1 = 0;
+        }
+
+        if (i2 > l1 - 1)
+        {
+            l1 = i2;
+        }
+
+        if (k1 != l1)
+        {
+            par1World.setBlockMetadataWithNotify(par2, par3, par4, l1, 2);
+            this.blocksNeedingUpdate.add(new ChunkPosition(par2, par3, par4));
+            this.blocksNeedingUpdate.add(new ChunkPosition(par2 - 1, par3, par4));
+            this.blocksNeedingUpdate.add(new ChunkPosition(par2 + 1, par3, par4));
+            this.blocksNeedingUpdate.add(new ChunkPosition(par2, par3 - 1, par4));
+            this.blocksNeedingUpdate.add(new ChunkPosition(par2, par3 + 1, par4));
+            this.blocksNeedingUpdate.add(new ChunkPosition(par2, par3, par4 - 1));
+            this.blocksNeedingUpdate.add(new ChunkPosition(par2, par3, par4 + 1));
+        }
+    }
+    
+    /**
+     * Calls World.notifyBlocksOfNeighborChange() for all neighboring blocks, but only if the given block is a redstone
+     * wire.
+     */
+    private void notifyWireNeighborsOfNeighborChange(World par1World, int par2, int par3, int par4)
+    {
+        if (par1World.getBlockId(par2, par3, par4) == this.blockID)
+        {
+            par1World.notifyBlocksOfNeighborChange(par2, par3, par4, this.blockID);
+            par1World.notifyBlocksOfNeighborChange(par2 - 1, par3, par4, this.blockID);
+            par1World.notifyBlocksOfNeighborChange(par2 + 1, par3, par4, this.blockID);
+            par1World.notifyBlocksOfNeighborChange(par2, par3, par4 - 1, this.blockID);
+            par1World.notifyBlocksOfNeighborChange(par2, par3, par4 + 1, this.blockID);
+            par1World.notifyBlocksOfNeighborChange(par2, par3 - 1, par4, this.blockID);
+            par1World.notifyBlocksOfNeighborChange(par2, par3 + 1, par4, this.blockID);
+        }
+    }
+    
+    /**
+     * Called whenever the block is added into the world. Args: world, x, y, z
+     */
+    public void onBlockAdded(World par1World, int par2, int par3, int par4)
+    {
+        super.onBlockAdded(par1World, par2, par3, par4);
+
+        if (!par1World.isRemote)
+        {
+        	this.updateAndPropagateCurrentStrength(par1World, par2, par3, par4);
+            par1World.notifyBlocksOfNeighborChange(par2, par3 + 1, par4, this.blockID);
+            par1World.notifyBlocksOfNeighborChange(par2, par3 - 1, par4, this.blockID);
+            this.notifyWireNeighborsOfNeighborChange(par1World, par2 - 1, par3, par4);
+            this.notifyWireNeighborsOfNeighborChange(par1World, par2 + 1, par3, par4);
+            this.notifyWireNeighborsOfNeighborChange(par1World, par2, par3, par4 - 1);
+            this.notifyWireNeighborsOfNeighborChange(par1World, par2, par3, par4 + 1);
+
+            if (par1World.isBlockNormalCube(par2 - 1, par3, par4))
+            {
+                this.notifyWireNeighborsOfNeighborChange(par1World, par2 - 1, par3 + 1, par4);
+            }
+            else
+            {
+                this.notifyWireNeighborsOfNeighborChange(par1World, par2 - 1, par3 - 1, par4);
+            }
+
+            if (par1World.isBlockNormalCube(par2 + 1, par3, par4))
+            {
+                this.notifyWireNeighborsOfNeighborChange(par1World, par2 + 1, par3 + 1, par4);
+            }
+            else
+            {
+                this.notifyWireNeighborsOfNeighborChange(par1World, par2 + 1, par3 - 1, par4);
+            }
+
+            if (par1World.isBlockNormalCube(par2, par3, par4 - 1))
+            {
+                this.notifyWireNeighborsOfNeighborChange(par1World, par2, par3 + 1, par4 - 1);
+            }
+            else
+            {
+                this.notifyWireNeighborsOfNeighborChange(par1World, par2, par3 - 1, par4 - 1);
+            }
+
+            if (par1World.isBlockNormalCube(par2, par3, par4 + 1))
+            {
+                this.notifyWireNeighborsOfNeighborChange(par1World, par2, par3 + 1, par4 + 1);
+            }
+            else
+            {
+                this.notifyWireNeighborsOfNeighborChange(par1World, par2, par3 - 1, par4 + 1);
+            }
+        }
+    }
+    
+    /**
+     * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are
+     * their own) Args: x, y, z, neighbor blockID
+     */
+    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
+    {
+        if (!par1World.isRemote)
+        {
+            boolean flag = this.canPlaceBlockAt(par1World, par2, par3, par4);
+
+            if (flag)
+            {
+                this.updateAndPropagateCurrentStrength(par1World, par2, par3, par4);
+            }
+            else
+            {
+                this.dropBlockAsItem(par1World, par2, par3, par4, 0, 0);
+                par1World.setBlockToAir(par2, par3, par4);
+            }
+
+            super.onNeighborBlockChange(par1World, par2, par3, par4, par5);
+        }
+    }
+    
+    /**
      * only called by clickMiddleMouseButton , and passed to inventory.setCurrentItem (along with isCreative)
      */
     public int idPicked(World par1World, int par2, int par3, int par4)
     {
         return ModItems.Dust_BlueStone.itemID;
     }
-
+    /*
+    @SideOnly(Side.CLIENT)
+    public static Icon func_94409_b(String par0Str, BlockWireRSaH blockWire)
+    {
+        return par0Str == blockWire.getIconCross() ? blockWire.iconCross : (par0Str == blockWire.getIconLine() ? blockWire.iconLine : (par0Str == blockWire.getIconCrossOverlay() ? blockWire.iconCrossOverlay : (par0Str == blockWire.getIconLineOverlay() ? blockWire.iconLineOverlay : null)));
+    }
+    */
 }

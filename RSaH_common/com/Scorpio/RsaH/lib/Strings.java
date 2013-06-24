@@ -5,24 +5,9 @@ public class Strings
 	/**
 	 * Block Names
 	 */
-	public static final String BLOCK_BLUESTONE_NAME = "BlueStone Block";
-	public static final String BLOCK_BLACKSTONE_NAME = "BlackStone Block";
-	public static final String BLOCK_BROWNSTONE_NAME = "BrownStone Block";
-	public static final String BLOCK_CYANSTONE_NAME = "CyanStone Block";
-	public static final String BLOCK_GLOWSTONE_NAME = "GlowStone Block";
-	public static final String BLOCK_GRAYSTONE_NAME = "GrayStone Block";
-	public static final String BLOCK_GREENSTONE_NAME = "GreenStone Block";
-	public static final String BLOCK_LIGHTBLUESTONE_NAME = "LightBlueStone Block";
-	public static final String BLOCK_LIGHTGRAYSTONE_NAME = "LightGrayStone Block";
-	public static final String BLOCK_LIMEGREENSTONE_NAME = "LimeGreenStone Block";
-	public static final String BLOCK_MAGENTASTONE_NAME = "MagentaStone Block";
-	public static final String BLOCK_ORANGESTONE_NAME = "OrangeStone Block";
-	public static final String BLOCK_PINKSTONE_NAME = "PinkStone Block";
-	public static final String BLOCK_PURPLESTONE_NAME = "PurpleStone Block";
-	public static final String BLOCK_WHITESTONE_NAME = "WhiteStone Block";
-	public static final String BLOCK_YELLOWSTONE_NAME = "YellowStone Block";
-	public static final String BLOCK_MAGMASTONE_NAME = "MagmaStone Block";
-	public static final String BLOCK_STRANGESTONE_NAME = "StrangeStone Block";
+	public static final String BLOCK_MINERAL_METABLOCKS_NAME = "Block";
+	public static final String BLOCK_TORCH_METABLOCKS_NAME = "Torch";
+	public static final String BLOCK_TORCH_IDLE_METABLOCKS_NAME = "TorchIdle";
 	
 	/**
 	 * Block-Wire Names
@@ -44,6 +29,7 @@ public class Strings
 	public static final String BLOCK_WIRE_WHITESTONE_NAME = "WhiteStone Wire";
 	public static final String BLOCK_WIRE_YELLOWSTONE_NAME = "YellowStone Wire";
 	public static final String BLOCK_WIRE_MAGMASTONE_NAME = "MagmaStone Wire";
+	public static final String BLOCK_WIRE_WIREBLOCK_NAME = "Wire";
 	
 	/**
 	 * Block-Torch Names

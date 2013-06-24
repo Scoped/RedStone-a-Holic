@@ -1,5 +1,6 @@
 package com.Scorpio.RsaH.lib;
 
+
 public class ItemIDs
 {
 	/**
@@ -23,6 +24,8 @@ public class ItemIDs
 	public static int ITEM_DUST_WHITESTONE_ID;
 	public static int ITEM_DUST_YELLOWSTONE_ID;
 	
+	public static int ITEM_DUST_WIRE_ID;
+	
 	/**
 	 * Item Default IDs
 	 */
@@ -43,5 +46,4 @@ public class ItemIDs
 	public static final int ITEM_DUST_PURPLESTONE_ID_DEFAULT = 3855;
 	public static final int ITEM_DUST_WHITESTONE_ID_DEFAULT = 3856;
 	public static final int ITEM_DUST_YELLOWSTONE_ID_DEFAULT = 3857;
-	
 }

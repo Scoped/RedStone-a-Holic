@@ -1,10 +1,8 @@
 package com.Scorpio.RsaH.creativeTab;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-
-import com.Scorpio.RsaH.block.ModBlocks;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -19,6 +17,6 @@ public class TabRSaH extends CreativeTabs
 	@SideOnly(Side.CLIENT)
 	public ItemStack getIconItemStack()
 	{
-		return new ItemStack(ModBlocks.BlueStoneBlock, 1, 0);
+		return new ItemStack(Item.stick, 1, 0);
 	}
 }

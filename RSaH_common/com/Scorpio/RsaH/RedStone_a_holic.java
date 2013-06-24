@@ -4,7 +4,6 @@ import java.io.File;
 
 import net.minecraft.creativetab.CreativeTabs;
 
-import com.Scorpio.RsaH.Recipes.ModRecipes;
 import com.Scorpio.RsaH.block.ModBlocks;
 import com.Scorpio.RsaH.configuration.ConfigurationHandler;
 import com.Scorpio.RsaH.core.handler.LocalizationHandler;
@@ -12,6 +11,7 @@ import com.Scorpio.RsaH.core.proxy.CommonProxy;
 import com.Scorpio.RsaH.creativeTab.TabRSaH;
 import com.Scorpio.RsaH.item.ModItems;
 import com.Scorpio.RsaH.lib.Reference;
+import com.Scorpio.RsaH.recipes.ModRecipes;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -39,6 +39,7 @@ public class RedStone_a_holic
 	@SidedProxy(
 		clientSide = Reference.CLIENT_PROXY_LOCATION,
 		serverSide = Reference.COMMON_PROXY_LOCATION)
+	
 	public static CommonProxy proxy;
 	
 	public static CreativeTabs TabRSaH = new TabRSaH(CreativeTabs.getNextID(), Reference.MOD_ID);
@@ -56,11 +57,13 @@ public class RedStone_a_holic
 		
 		ModRecipes.recipesInit();
 	}
+	
 	@Init
 	public void init(FMLInitializationEvent event)
 	{
 		
 	}
+	
 	@PostInit
 	public void postInit(FMLPostInitializationEvent event)
 	{

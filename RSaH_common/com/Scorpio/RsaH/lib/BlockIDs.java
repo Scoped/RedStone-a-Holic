@@ -3,35 +3,19 @@ package com.Scorpio.RsaH.lib;
 public class BlockIDs
 {
 	
-	/**
-	 * Block Default IDs 257 - 274
-	 */
-	public static final int BLOCK_BLUESTONE_ID_DEFAULT = 257;
-	public static final int BLOCK_BLACKSTONE_ID_DEFAULT = 258;
-	public static final int BLOCK_BROWNSTONE_ID_DEFAULT = 259;
-	public static final int BLOCK_CYANSTONE_ID_DEFAULT = 260;
-	public static final int BLOCK_GLOWSTONE_ID_DEFAULT = 261;
-	public static final int BLOCK_GREYSTONE_ID_DEFAULT = 262;
-	public static final int BLOCK_GREENSTONE_ID_DEFAULT = 263;
-	public static final int BLOCK_LIGHTBLUESTONE_ID_DEFAULT = 264;
-	public static final int BLOCK_LIGHTGRAYSTONE_ID_DEFAULT = 265;
-	public static final int BLOCK_LIMEGREENSTONE_ID_DEFAULT = 266;
-	public static final int BLOCK_MAGENTASTONE_ID_DEFAULT = 267;
-	public static final int BLOCK_ORANGESTONE_ID_DEFAULT = 268;
-	public static final int BLOCK_PINKSTONE_ID_DEFAULT = 269;
-	public static final int BLOCK_PURPLESTONE_ID_DEFAULT = 270;
-	public static final int BLOCK_WHITESTONE_ID_DEFAULT = 271;
-	public static final int BLOCK_YELLOWSTONE_ID_DEFAULT = 272;
-	public static final int BLOCK_MAGMASTONE_ID_DEFAULT = 273;
-	public static final int BLOCK_STRANGESTONE_ID_DEFAULT = 274;
+	public static final int BLOCK_MINERAL_METABLOCKS_ID_DEFAULT = 275;
+	public static final int BLOCK_TORCH_IDLE_METABLOCKS_ID_DEFAULT = 276;
+	public static final int BLOCK_TORCH_ACTIVE_METABLOCKS_ID_DEFAULT = 277;
 	
-	//MISSING DEFAUlt ID 275
+	public static int BLOCK_MINERAL_METABLOCKS_ID;
+	public static int BLOCK_TORCH_IDLE_METABLOCKS_ID;
+	public static int BLOCK_TORCH_ACTIVE_METABLOCKS_ID;
 	
 	/**
 	 * Block-Wire Default IDs 276 - 292
 	 */
-	public static final int BLOCK_WIRE_BLUESTONE_ID_DEFAULT = 276;
-	public static final int BLOCK_WIRE_BLACKSTONE_ID_DEFAULT = 277;
+	public static final int BLOCK_WIRE_BLUESTONE_ID_DEFAULT = 328;
+	public static final int BLOCK_WIRE_BLACKSTONE_ID_DEFAULT = 329;
 	public static final int BLOCK_WIRE_BROWNSTONE_ID_DEFAULT = 278;
 	public static final int BLOCK_WIRE_CYANSTONE_ID_DEFAULT = 279;
 	public static final int BLOCK_WIRE_GLOWSTONE_ID_DEFAULT = 280;
@@ -47,8 +31,7 @@ public class BlockIDs
 	public static final int BLOCK_WIRE_WHITESTONE_ID_DEFAULT = 290;
 	public static final int BLOCK_WIRE_YELLOWSTONE_ID_DEFAULT = 291;
 	public static final int BLOCK_WIRE_MAGMASTONE_ID_DEFAULT = 292;
-	
-	//MISSING DEFAULT ID 293
+	// BlockID 293 isn't used
 	
 	/**
 	 * Block-Torch Default IDs 294 - 327
@@ -87,28 +70,6 @@ public class BlockIDs
 	public static final int BLOCK_TORCH_WHITESTONEACTIVE_ID_DEFAULT = 325;
 	public static final int BLOCK_TORCH_YELLOWSTONEIDLE_ID_DEFAULT = 326;
 	public static final int BLOCK_TORCH_YELLOWSTONEACTIVE_ID_DEFAULT = 327;
-	
-	/**
-	 * Block IDs
-	 */
-	public static int BLOCK_BLUESTONE_ID;
-	public static int BLOCK_BLACKSTONE_ID;
-	public static int BLOCK_BROWNSTONE_ID;
-	public static int BLOCK_CYANSTONE_ID;
-	public static int BLOCK_GLOWSTONE_ID;
-	public static int BLOCK_GREYSTONE_ID;
-	public static int BLOCK_GREENSTONE_ID;
-	public static int BLOCK_LIGHTBLUESTONE_ID;
-	public static int BLOCK_LIGHTGRAYSTONE_ID;
-	public static int BLOCK_LIMEGREENSTONE_ID;
-	public static int BLOCK_MAGENTASTONE_ID;
-	public static int BLOCK_ORANGESTONE_ID;
-	public static int BLOCK_PINKSTONE_ID;
-	public static int BLOCK_PURPLESTONE_ID;
-	public static int BLOCK_WHITESTONE_ID;
-	public static int BLOCK_YELLOWSTONE_ID;
-	public static int BLOCK_MAGMASTONE_ID;
-	public static int BLOCK_STRANGESTONE_ID;
 	
 	/**
 	 * Block-Wire IDs

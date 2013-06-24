@@ -18,7 +18,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class Block_Torch_BlackStone extends BlockTorchRSaH
 {
     /** Map of ArrayLists of RedstoneUpdateInfo. Key of map is World. */
-    private static Map blackstoneUpdateInfoCache = new HashMap();
+    @SuppressWarnings("rawtypes")
+	private static Map blackstoneUpdateInfoCache = new HashMap();
     
 	protected Block_Torch_BlackStone(int id, boolean isLite)
 	{
@@ -31,20 +32,21 @@ public class Block_Torch_BlackStone extends BlockTorchRSaH
 		this.setUnlocalizedName(Strings.BLOCK_TORCH_BLACKSTONE_NAME);
 	}
 	//NOTE: TURNS SIGNALS OFF
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private boolean checkForBurnout(World par1World, int par2, int par3, int par4, boolean par5)
     {
         if (!blackstoneUpdateInfoCache.containsKey(par1World))
         {
         	blackstoneUpdateInfoCache.put(par1World, new ArrayList());
         }
-
-        List list = (List)blackstoneUpdateInfoCache.get(par1World);
+        
+		List list = (List)blackstoneUpdateInfoCache.get(par1World);
 
         if (par5)
         {
             list.add(new RedstoneUpdateInfo(par2, par3, par4, par1World.getTotalWorldTime()));
         }
-
+        
         int l = 0;
 
         for (int i1 = 0; i1 < list.size(); ++i1)
@@ -116,7 +118,8 @@ public class Block_Torch_BlackStone extends BlockTorchRSaH
     /**
      * Ticks the block if it's been scheduled
      */
-    public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
+    @SuppressWarnings("rawtypes")
+	public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
     {
     boolean flag = this.isIndirectlyPowered(par1World, par2, par3, par4);
     List list = (List)blackstoneUpdateInfoCache.get(par1World);

@@ -3,6 +3,9 @@ package com.Scorpio.RsaH.item;
 import net.minecraft.item.Item;
 
 import com.Scorpio.RsaH.lib.ItemIDs;
+import com.Scorpio.RsaH.tileEntity.TileEntityWire;
+
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModItems
 {
@@ -33,6 +36,8 @@ public class ModItems
 	public static Item Dust_WhiteStone;
 	public static Item Dust_YellowStone;
 	
+	//public static Item Dust_Wire;
+	
 	public static void ItemInit()
 	{
 		/**
@@ -61,5 +66,9 @@ public class ModItems
 		Dust_PurpleStone = new Item_Dust_PurpleStone(ItemIDs.ITEM_DUST_PURPLESTONE_ID);
 		Dust_WhiteStone = new Item_Dust_WhiteStone(ItemIDs.ITEM_DUST_WHITESTONE_ID);
 		Dust_YellowStone = new Item_Dust_YellowStone(ItemIDs.ITEM_DUST_YELLOWSTONE_ID);
+		//Dust_Wire = new Item_Dust_Wire(ItemIDs.ITEM_DUST_WIRE_ID);
+		
+		GameRegistry.registerTileEntity(TileEntityWire.class, "Wire");
+		
 	};
 }

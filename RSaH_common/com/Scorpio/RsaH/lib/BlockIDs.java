@@ -11,12 +11,16 @@ public class BlockIDs
 	public static int BLOCK_TORCH_IDLE_METABLOCKS_ID;
 	public static int BLOCK_TORCH_ACTIVE_METABLOCKS_ID;
 	
+	public static final int BLOCK_PARTICLEBLOCK_ID_DEFAULT = 278;
+	
+	public static int BLOCK_PARTICLEBLOCK_ID;
+	
 	/**
 	 * Block-Wire Default IDs 276 - 292
 	 */
 	public static final int BLOCK_WIRE_BLUESTONE_ID_DEFAULT = 328;
 	public static final int BLOCK_WIRE_BLACKSTONE_ID_DEFAULT = 329;
-	public static final int BLOCK_WIRE_BROWNSTONE_ID_DEFAULT = 278;
+	public static final int BLOCK_WIRE_BROWNSTONE_ID_DEFAULT = 330;
 	public static final int BLOCK_WIRE_CYANSTONE_ID_DEFAULT = 279;
 	public static final int BLOCK_WIRE_GLOWSTONE_ID_DEFAULT = 280;
 	public static final int BLOCK_WIRE_GRAYSTONE_ID_DEFAULT = 281;

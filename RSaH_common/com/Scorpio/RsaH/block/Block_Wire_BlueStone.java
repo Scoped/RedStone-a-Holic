@@ -5,8 +5,6 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Icon;
 import net.minecraft.world.ChunkPosition;
@@ -133,7 +131,7 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
             return par4 == (j1 & 3) || par4 == Direction.rotateOpposite[j1 & 3];
         }
     }
-    
+    /*
     public static boolean isPowerProviderOrTorch(IBlockAccess par0IBlockAccess, int par1, int par2, int par3, int par4)
     {
         int i1 = par0IBlockAccess.getBlockId(par1, par2, par3);
@@ -152,7 +150,7 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
             return par4 == (j1 & 3) || par4 == Direction.rotateOpposite[j1 & 3];
         }
     }
-    
+    */
     /**
      * Returns true if the block coordinate passed can provide power, or is a redstone wire, or if its a repeater that
      * is powered.

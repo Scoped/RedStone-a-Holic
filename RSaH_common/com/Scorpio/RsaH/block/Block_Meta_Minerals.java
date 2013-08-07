@@ -18,6 +18,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class Block_Meta_Minerals extends BlockRSaH
 {
+	
+	private boolean canPowerWire = false;
 	@SideOnly(Side.CLIENT)
 	public Icon[] icons;
 	
@@ -32,6 +34,14 @@ public class Block_Meta_Minerals extends BlockRSaH
 		this.setLightValue(0.5F);
 	}
 	
+    /**
+     * Determines the damage on the item the block drops. Used in cloth and wood.
+     */
+	public int damageDropped(int meta)
+	{
+		  return meta;
+	}
+	
 	@SideOnly(Side.CLIENT)
 	
     /**
@@ -39,7 +49,7 @@ public class Block_Meta_Minerals extends BlockRSaH
      */
 	public Icon getIcon(int i, int j)
 	{
-		return this.icons[j];
+		return icons[j];
 	}
 	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -69,9 +79,9 @@ public class Block_Meta_Minerals extends BlockRSaH
      * returns true, standard redstone propagation rules will apply instead and this will not be called. Args: World, X,
      * Y, Z, side. Note that the side is reversed - eg it is 1 (up) when checking the bottom of the block.
      */
-    public int isProvidingWeakPower(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
+    public int isProvidingWeakPower(IBlockAccess par1IBlockAccess, int i, int j, int k, int l)
     {
-        return 15;
+		return 15;
     }
     
 	@SideOnly(Side.CLIENT)
@@ -86,8 +96,7 @@ public class Block_Meta_Minerals extends BlockRSaH
 		
 		for (int i = 0; i < icons.length; ++i)
 		{
-			icons[i] = iconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName2() + i);
+			icons[i] = iconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName() + i);
 		}
 	}
-	
 }

@@ -22,44 +22,64 @@
 	<entry key="tile.BlockStrangeStone.name">StrangeStone Block</entry>
 	
 	<entry key="tile.BlueStone Wire.name">BlueStone Wire</entry>
+	<entry key="tile.BlackStone Wire.name">BlackStone Wire</entry>
+	<entry key="tile.BrownStone Wire.name">BrownStone Wire</entry>
+	<entry key="tile.CyanStone Wire.name">CyanStone Wire</entry>
+	<entry key="tile.GlowStone Wire.name">GlowStone Wire</entry>
+	<entry key="tile.GrayStone Wire.name">GrayStone Wire</entry>
+	<entry key="tile.GreenStone Wire.name">GreenStone Wire</entry>
+	<entry key="tile.LightBlueStone Wire.name">LightBlueStone Wire</entry>
+	<entry key="tile.LightGrayStone Wire.name">LightGrayStone Wire</entry>
+	<entry key="tile.LimeGreenStone Wire.name">LimeGreenStone Wire</entry>
+	<entry key="tile.MagentaStone Wire.name">MagentaStone Wire</entry>
+	<entry key="tile.OrangeStone Wire.name">OrangeStone Wire</entry>
+	<entry key="tile.PinkStone Wire.name">PinkStone Wire</entry>
+	<entry key="tile.PurpleStone Wire.name">PurpleStone Wire</entry>
+	<entry key="tile.WhiteStone Wire.name">WhiteStone Wire</entry>
+	<entry key="tile.YellowStone Wire.name">YellowStone Wire</entry>
+	<entry key="tile.MagmaStone Wire.name">MagmaStone Wire</entry>
 	
-	<entry key="tile.TorchIdle0.name">BlueStone Torch Idle</entry>
-	<entry key="tile.TorchIdle1.name">BlackStone Torch Idle</entry>
-	<entry key="tile.TorchIdle2.name">BrownStone Torch Idle</entry>
-	<entry key="tile.TorchIdle3.name">CyanStone Torch Idle</entry>
-	<entry key="tile.TorchIdle4.name">YellowStone Torch Idle</entry>
-	<entry key="tile.TorchIdle5.name">GrayStone Torch Idle</entry>
-	<entry key="tile.TorchIdle6.name">GreenStone Torch Idle</entry>
-	<entry key="tile.TorchIdle7.name">LimeGreenStone Torch Idle</entry>
-	<entry key="tile.TorchIdle8.name">LimeGreenStone Torch Idle</entry>
-	<entry key="tile.TorchIdle9.name">LimeGreenStone Torch Idle</entry>
-	<entry key="tile.TorchIdle10.name">MagentaStone Torch Idle</entry>
-	<entry key="tile.TorchIdle11.name">OrangeStone Torch Idle</entry>
-	<entry key="tile.TorchIdle12.name">PinkStone Torch Idle</entry>
-	<entry key="tile.TorchIdle13.name">PurpleStone Torch Idle</entry>
-	<entry key="tile.TorchIdle14.name">WhiteStone Torch Idle</entry>
-	<entry key="tile.TorchIdle15.name">MagmaStone Torch Idle</entry>
+	<entry key="tile.ParticleBlock.name">Particle Block</entry>
 	
-	<entry key="tile.Torch0.name">BlueStone Torch</entry>
-	<entry key="tile.Torch1.name">BlackStone Torch</entry>
-	<entry key="tile.Torch2.name">BrownStone Torch</entry>
-	<entry key="tile.Torch3.name">CyanStone Torch</entry>
-	<entry key="tile.Torch4.name">GlowStone Torch</entry>
-	<entry key="tile.Torch5.name">GrayStone Torch</entry>
-	<entry key="tile.Torch6.name">GreenStone Torch</entry>
-	<entry key="tile.Torch7.name">LimeGreenStone Torch</entry>
-	<entry key="tile.Torch8.name">LimeGreenStone Torch</entry>
-	<entry key="tile.Torch9.name">MagentaStone Torch</entry>
-	<entry key="tile.Torch10.name">MagmaStone Torch</entry>
-	<entry key="tile.Torch11.name">OrangeStone Torch</entry>
-	<entry key="tile.Torch12.name">PinkStone Torch</entry>
-	<entry key="tile.Torch13.name">PurpleStone Torch</entry>
-	<entry key="tile.Torch14.name">WhiteStone Torch</entry>
-	<entry key="tile.Torch15.name">YellowStone Torch</entry>
+	<entry key="tile.BlueStoneIdleTorch.name">BlueStone Torch Idle</entry>
+	<entry key="tile.BlackStoneIdleTorch.name">BlackStone Torch Idle</entry>
+	<entry key="tile.BrownStoneIdleTorch.name">BrownStone Torch Idle</entry>
+	<entry key="tile.CyanStoneIdleTorch.name">CyanStone Torch Idle</entry>
+	<entry key="tile.YellowStoneIdleTorch.name">YellowStone Torch Idle</entry>
+	<entry key="tile.GrayStoneIdleTorch.name">GrayStone Torch Idle</entry>
+	<entry key="tile.GreenStoneIdleTorch.name">GreenStone Torch Idle</entry>
+	<entry key="tile.LightBlueStoneIdleTorch.name">LightBlueStone Torch Idle</entry>
+	<entry key="tile.LightGrayStoneIdleTorch.name">LightGrayStone Torch Idle</entry>
+	<entry key="tile.LimeGreenStoneIdleTorch.name">LimeGreenStone Torch Idle</entry>
+	<entry key="tile.MagentaStoneIdleTorch.name">MagentaStone Torch Idle</entry>
+	<entry key="tile.OrangeStoneIdleTorch.name">OrangeStone Torch Idle</entry>
+	<entry key="tile.PinkStoneIdleTorch.name">PinkStone Torch Idle</entry>
+	<entry key="tile.PurpleStoneIdleTorch.name">PurpleStone Torch Idle</entry>
+	<entry key="tile.WhiteStoneIdleTorch.name">WhiteStone Torch Idle</entry>
+	<entry key="tile.MagmaStoneIdleTorch.name">MagmaStone Torch Idle</entry>
+	<entry key="tile.GlowStoneIdleTorch.name">GlowStone Torch Idle</entry>
+	
+	<entry key="tile.BlueStoneTorch.name">BlueStone Torch</entry>
+	<entry key="tile.BlackStoneTorch.name">BlackStone Torch</entry>
+	<entry key="tile.BrownStoneTorch.name">BrownStone Torch</entry>
+	<entry key="tile.CyanStoneTorch.name">CyanStone Torch</entry>
+	<entry key="tile.GlowStoneTorch.name">GlowStone Torch</entry>
+	<entry key="tile.GrayStoneTorch.name">GrayStone Torch</entry>
+	<entry key="tile.GreenStoneTorch.name">GreenStone Torch</entry>
+	<entry key="tile.LightBlueStoneTorch.name">LightBlueStone Torch</entry>
+	<entry key="tile.LightGrayStoneTorch.name">LightGrayStone Torch</entry>
+	<entry key="tile.LimeGreenStoneTorch.name">LimeGreenStone Torch</entry>
+	<entry key="tile.MagentaStoneTorch.name">MagentaStone Torch</entry>
+	<entry key="tile.MagmaStoneTorch.name">MagmaStone Torch</entry>
+	<entry key="tile.OrangeStoneTorch.name">OrangeStone Torch</entry>
+	<entry key="tile.PinkStoneTorch.name">PinkStone Torch</entry>
+	<entry key="tile.PurpleStoneTorch.name">PurpleStone Torch</entry>
+	<entry key="tile.WhiteStoneTorch.name">WhiteStone Torch</entry>
+	<entry key="tile.YellowStoneTorch.name">YellowStone Torch</entry>
+	
+	<entry key="item.TheMightRodOfTesting.name">The Might Rod Of Testing!</entry>
 	
 	<entry key="item.BlueStone Dust.name">BlueStone Dust</entry>
-	
-	<entry key="tile.ParticleBlock">Particle Block</entry>
 	
 	<entry key="itemGroup.RSaH">RedStone-a-Holic</entry>
 </properties>

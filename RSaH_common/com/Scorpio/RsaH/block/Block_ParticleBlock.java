@@ -2,35 +2,29 @@ package com.Scorpio.RsaH.block;
 
 import java.util.Random;
 
+import net.minecraft.block.material.Material;
+import net.minecraft.world.World;
+
 import com.Scorpio.RsaH.RedStone_a_holic;
 import com.Scorpio.RsaH.lib.Strings;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class Block_ParticalBlock extends BlockRSaH
+public class Block_ParticleBlock extends BlockRSaH
 {
-	private double motionX;
-	private double motionY;
-	private double motionZ;
-
-	public Block_ParticalBlock(int id)
+	
+	public Block_ParticleBlock(int id)
 	{
 		super(id, Material.rock);
 		this.setCreativeTab(RedStone_a_holic.TabRSaH);
 		this.setUnlocalizedName(Strings.BLOCK_PARTICLEBLOCK_NAME);
+		this.setLightValue(1.0F);
+		this.setHardness(3.0F);
+		this.setResistance(5.0F);
+		this.setStepSound(soundStoneFootstep);
+		this.setBurnProperties(id, 4, 8);
 	}
-	
-    /**
-     * Checks to see if the block is flammable.
-     */
-    private boolean isFlammable(World par1World, int par2, int par3, int par4)
-    {
-        return par1World.getBlockMaterial(par2, par3, par4).getCanBurn();
-    }
 	
 	@SideOnly(Side.CLIENT)
 	public void randomDisplayTick(World world, int x, int y, int z, Random random)
@@ -57,13 +51,13 @@ public class Block_ParticalBlock extends BlockRSaH
         d4 = ((double)random.nextFloat() - -1.5D) * 0.5D;
         d5 = ((double)random.nextFloat() - 0.5D) * 0.5D;
         
-		world.spawnParticle("smoke", (double)(f1+f4), (double)f2 , (double)(f3+f5), 0.0D, 0.0D, 0.0D);
+		//world.spawnParticle("smoke", (double)(f1+f4), (double)f2 , (double)(f3+f5), 0.0D, 0.0D, 0.0D);
 		//world.spawnParticle("largesmoke", (double)smoke1, (double)smoke2, (double)smoke3, 0.0D, 0.0D, 1.0D);
 		//world.spawnParticle("largesmoke", (double)smoke1, (double)smoke2, (double)smoke3, 1.0D, 0.0D, 0.0D);
 		//world.spawnParticle("largesmoke", (double)smoke1, (double)smoke2, (double)smoke3, -1.0D, 0.0D, 0.0D);
 		//world.spawnParticle("largesmoke", (double)smoke1, (double)smoke2, (double)smoke3, 0.0D, 0.0D, -1.0D);
-		world.spawnParticle("flame", (double)(f1+f4), (double)f2 , (double)(f3+f5), 0.0D, 1.0D, 0.0D);
-		world.spawnParticle("flame", (double)(f1+f4), (double)f2 , (double)(f3+f5), 0.0D, 0.0D, 0.0D);
+		//world.spawnParticle("flame", (double)(f1+f4), (double)f2 , (double)(f3+f5), 0.0D, 1.0D, 0.0D);
+		//world.spawnParticle("flame", (double)(f1+f4), (double)f2 , (double)(f3+f5), 0.0D, 0.0D, 0.0D);
 		world.spawnParticle("portal", d0, d1, d2, d3, d4 + 10.0D, d5);
 		world.spawnParticle("enchantmenttable", (double)(f1+f4), (double)f2 , (double)(f3+f5), 0.0D, 10.0D, 0.0D);
 	}

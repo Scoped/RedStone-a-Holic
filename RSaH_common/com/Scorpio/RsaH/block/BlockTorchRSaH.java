@@ -1,17 +1,17 @@
 package com.Scorpio.RsaH.block;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockRedstoneTorch;
+import net.minecraft.client.renderer.texture.IconRegister;
+
 import com.Scorpio.RsaH.lib.Reference;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockRedstoneTorch;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IconRegister;
 
 public class BlockTorchRSaH extends BlockRedstoneTorch
 {
-	
+
     private String IconTorchLit;
     private String IconTorch;
     
@@ -28,22 +28,22 @@ public class BlockTorchRSaH extends BlockRedstoneTorch
     	this.IconTorch = iconTorch;
     	return this;
     }
-	
+
 	public String getIconTorchLit()
 	{
 		return "tile." + this.IconTorchLit;
 	}
-	
+
 	public String getIconTorch()
 	{
 		return "tile." + this.IconTorch;
 	}
-	
+
 	public BlockTorchRSaH(int id, boolean isLite)
 	{
 		super(id, isLite);
 	}
-	
+
     @SideOnly(Side.CLIENT)
     
     /**

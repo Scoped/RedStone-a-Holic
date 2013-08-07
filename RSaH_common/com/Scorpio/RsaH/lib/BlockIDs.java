@@ -3,24 +3,18 @@ package com.Scorpio.RsaH.lib;
 public class BlockIDs
 {
 	
-	public static final int BLOCK_MINERAL_METABLOCKS_ID_DEFAULT = 275;
-	public static final int BLOCK_TORCH_IDLE_METABLOCKS_ID_DEFAULT = 276;
-	public static final int BLOCK_TORCH_ACTIVE_METABLOCKS_ID_DEFAULT = 277;
+	public static final int BLOCK_MINERAL_METABLOCKS_ID_DEFAULT = 330;
+	public static final int BLOCK_PARTICLEBLOCK_ID_DEFAULT = 331;
 	
 	public static int BLOCK_MINERAL_METABLOCKS_ID;
-	public static int BLOCK_TORCH_IDLE_METABLOCKS_ID;
-	public static int BLOCK_TORCH_ACTIVE_METABLOCKS_ID;
-	
-	public static final int BLOCK_PARTICLEBLOCK_ID_DEFAULT = 278;
-	
 	public static int BLOCK_PARTICLEBLOCK_ID;
 	
 	/**
 	 * Block-Wire Default IDs 276 - 292
 	 */
-	public static final int BLOCK_WIRE_BLUESTONE_ID_DEFAULT = 328;
-	public static final int BLOCK_WIRE_BLACKSTONE_ID_DEFAULT = 329;
-	public static final int BLOCK_WIRE_BROWNSTONE_ID_DEFAULT = 330;
+	public static final int BLOCK_WIRE_BLUESTONE_ID_DEFAULT = 276;
+	public static final int BLOCK_WIRE_BLACKSTONE_ID_DEFAULT = 277;
+	public static final int BLOCK_WIRE_BROWNSTONE_ID_DEFAULT = 278;
 	public static final int BLOCK_WIRE_CYANSTONE_ID_DEFAULT = 279;
 	public static final int BLOCK_WIRE_GLOWSTONE_ID_DEFAULT = 280;
 	public static final int BLOCK_WIRE_GRAYSTONE_ID_DEFAULT = 281;
@@ -36,7 +30,7 @@ public class BlockIDs
 	public static final int BLOCK_WIRE_YELLOWSTONE_ID_DEFAULT = 291;
 	public static final int BLOCK_WIRE_MAGMASTONE_ID_DEFAULT = 292;
 	// BlockID 293 isn't used
-	
+
 	/**
 	 * Block-Torch Default IDs 294 - 327
 	 */
@@ -74,7 +68,7 @@ public class BlockIDs
 	public static final int BLOCK_TORCH_WHITESTONEACTIVE_ID_DEFAULT = 325;
 	public static final int BLOCK_TORCH_YELLOWSTONEIDLE_ID_DEFAULT = 326;
 	public static final int BLOCK_TORCH_YELLOWSTONEACTIVE_ID_DEFAULT = 327;
-	
+
 	/**
 	 * Block-Wire IDs
 	 */
@@ -95,7 +89,7 @@ public class BlockIDs
 	public static int BLOCK_WIRE_WHITESTONE_ID;
 	public static int BLOCK_WIRE_YELLOWSTONE_ID;
 	public static int BLOCK_WIRE_MAGMASTONE_ID;
-	
+
 	/**
 	 * Block-Torch IDs
 	 */

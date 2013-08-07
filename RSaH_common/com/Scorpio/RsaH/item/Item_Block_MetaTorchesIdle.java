@@ -45,8 +45,8 @@ public class Item_Block_MetaTorchesIdle extends ItemBlock
 		case 12: {name = "OrangeStoneIdle"; break;}
 		case 13: {name = "PinkStoneIdle"; break;}
 		case 14: {name = "PurpleStoneIdle"; break;}
-		//case 15: {name = "MagmaStoneIdle"; break;}
-		//case 16: {name = "GlowStoneIdle"; break;}
+		case 15: {name = "MagmaStoneIdle"; break;}
+		case 16: {name = "GlowStoneIdle"; break;}
 		}
 		return this.getUnlocalizedName() + name;
 	}

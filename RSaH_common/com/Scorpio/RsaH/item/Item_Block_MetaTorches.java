@@ -5,6 +5,7 @@ import net.minecraft.item.ItemStack;
 
 public class Item_Block_MetaTorches extends ItemBlock
 {
+	
 	public Item_Block_MetaTorches(int id)
 	{
 		super(id);
@@ -45,8 +46,8 @@ public class Item_Block_MetaTorches extends ItemBlock
 		case 12: {name = "PinkStone"; break;}
 		case 13: {name = "PurpleStone"; break;}
 		case 14: {name = "WhiteStone"; break;}
-		//case 15: {name = "MagmaStone"; break;}
-		//case 16: {name = "GlowStone"; break;}
+		case 15: {name = "MagmaStone"; break;}
+		case 16: {name = "GlowStone"; break;}
 		}
 		return this.getUnlocalizedName() + name;
 	}

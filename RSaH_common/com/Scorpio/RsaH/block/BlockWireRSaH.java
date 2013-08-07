@@ -22,32 +22,32 @@ public class BlockWireRSaH extends BlockRedstoneWire
     @SideOnly(Side.CLIENT)
     protected static Icon iconLineOverlay;
     
-    private String IconCross;
-    private String IconLine;
-    private String IconCrossOverlay;
-    private String IconLineOverlay;
+    private static String IconCross;
+    private static String IconLine;
+    private static String IconCrossOverlay;
+    private static String IconLineOverlay;
     
     public Block setIconCross(String iconCross)
     {
-    	this.IconCross = iconCross;
+    	IconCross = iconCross;
     	return this;
     }
     
     public Block setIconLine(String iconLine)
     {
-    	this.IconLine = iconLine;
+    	IconLine = iconLine;
     	return this;
     }
     
     public Block setIconCrossOverlay(String iconCrossOverlay)
     {
-    	this.IconCrossOverlay = iconCrossOverlay;
+    	IconCrossOverlay = iconCrossOverlay;
     	return this;
     }
     
     public Block setIconLineOverlay(String iconLineOverlay)
     {
-    	this.IconLineOverlay = iconLineOverlay;
+    	IconLineOverlay = iconLineOverlay;
     	return this;
     }
     
@@ -56,40 +56,39 @@ public class BlockWireRSaH extends BlockRedstoneWire
 		super(id);
 	}
 	
-	public String getIconCross()
+	public static String getIconCross()
 	{
-		return "tile." + this.IconCross;
+		return "tile." + IconCross;
 	}
 	
-	public String getIconLine()
+	public static String getIconLine()
 	{
-		return "tile." + this.IconLine;
+		return "tile." + IconLine;
 	}
 	
-	public String getIconCrossOverlay()
+	public static String getIconCrossOverlay()
 	{
-		return "tile." + this.IconCrossOverlay;
+		return "tile." + IconCrossOverlay;
 	}
 	
-	public String getIconLineOverlay()
+	public static String getIconLineOverlay()
 	{
-		return "tile." + this.IconLineOverlay;
+		return "tile." + IconLineOverlay;
 	}
 	
 	@SideOnly(Side.CLIENT)
-	@Override
 	public void registerIcons(IconRegister register)
 	{
-		iconCross = register.registerIcon(Reference.MOD_ID + ":" + this.getIconCross().substring(this.getIconCross().indexOf(".")+1));
-		iconLine = register.registerIcon(Reference.MOD_ID + ":" + this.getIconCrossOverlay().substring(this.getIconCrossOverlay().indexOf(".")+1));
-		iconCrossOverlay = register.registerIcon(Reference.MOD_ID + ":" + this.getIconLine().substring(this.getIconLine().indexOf(".")+1));
-		iconLineOverlay = register.registerIcon(Reference.MOD_ID + ":" + this.getIconLineOverlay().substring(this.getIconLineOverlay().indexOf(".")+1));
+		iconCross = register.registerIcon(Reference.MOD_ID + ":" + getIconCross().substring(getIconCross().indexOf(".")+1));
+		iconLine = register.registerIcon(Reference.MOD_ID + ":" + getIconCrossOverlay().substring(getIconCrossOverlay().indexOf(".")+1));
+		iconCrossOverlay = register.registerIcon(Reference.MOD_ID + ":" + getIconLine().substring(getIconLine().indexOf(".")+1));
+		iconLineOverlay = register.registerIcon(Reference.MOD_ID + ":" + getIconLineOverlay().substring(getIconLineOverlay().indexOf(".")+1));
 		this.blockIcon = BlockWireRSaH.iconCross;
 	}
 	
     @SideOnly(Side.CLIENT)
-    public Icon icon(String par0Str)
+    public static Icon icon(String par0Str)
     {
-        return par0Str == this.getIconCross() ? BlockWireRSaH.iconCross : (par0Str == this.getIconLine() ? BlockWireRSaH.iconLine : (par0Str == this.getIconCrossOverlay() ? BlockWireRSaH.iconCrossOverlay : (par0Str == this.getIconLineOverlay() ? BlockWireRSaH.iconLineOverlay : null)));
+        return par0Str == getIconCross() ? BlockWireRSaH.iconCross : (par0Str == getIconLine() ? BlockWireRSaH.iconLine : (par0Str == getIconCrossOverlay() ? BlockWireRSaH.iconCrossOverlay : (par0Str == getIconLineOverlay() ? BlockWireRSaH.iconLineOverlay : null)));
     }
 }

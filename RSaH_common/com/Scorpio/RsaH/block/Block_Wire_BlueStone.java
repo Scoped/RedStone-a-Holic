@@ -5,47 +5,54 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockRedstoneWire;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Icon;
 import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
+import com.Scorpio.RsaH.RedStone_a_holic;
 import com.Scorpio.RsaH.item.ModItems;
+import com.Scorpio.RsaH.lib.Reference;
 import com.Scorpio.RsaH.lib.Strings;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class Block_Wire_BlueStone extends BlockWireRSaH
+public class Block_Wire_BlueStone extends BlockRedstoneWire
 {
-    /**
+	/**
      * When false, power transmission methods do not look at other redstone wires. Used internally during
      * updateCurrentStrength.
      */
     private boolean wiresProvidePower = true;
-    private Set blocksNeedingUpdate = new HashSet();
+	private Set blocksNeedingUpdate = new HashSet();
     @SideOnly(Side.CLIENT)
-    static Icon iconCross;
+    private static Icon field_94413_c;
     @SideOnly(Side.CLIENT)
-    static Icon iconLine;
+    private static Icon field_94410_cO;
     @SideOnly(Side.CLIENT)
-    static Icon iconCrossOverlay;
+    private static Icon field_94411_cP;
     @SideOnly(Side.CLIENT)
-    static Icon iconLineOverlay;
+    private static Icon field_94412_cQ;
     
 	public Block_Wire_BlueStone(int id)
 	{
 		super(id);
 		this.setUnlocalizedName(Strings.BLOCK_WIRE_BLUESTONE_NAME);
 		this.enableStats = false;
+		this.setCreativeTab(RedStone_a_holic.TabRSaH);
 		//this.setIconCross("BlueStoneDust_Cross");
 		//this.setIconCrossOverlay("BlueStoneDust_Cross_Overlay");
 		//this.setIconLine("BlueStoneDust_Line");
 		//this.setIconLineOverlay("BlueStoneDust_Line_Overlay");
 	}
 	
-    @SideOnly(Side.CLIENT)
+	@SideOnly(Side.CLIENT)
+    
     /**
      * Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called
      * when first determining what to render.
@@ -54,15 +61,7 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
     {
         return 333399;
     }
-    
-    /**
-     * The type of render function that is called for this block
-     */
-	public int getRenderType()
-	{
-		return ModBlocks.modelWireID;
-	}
-    
+	
     /**
      * A randomly called display update to be able to add particles or other items for display
      */
@@ -113,11 +112,11 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
     {
         int i1 = par0IBlockAccess.getBlockId(par1, par2, par3);
 
-        if (i1 != ModBlocks.BlueStoneWireBlock.blockID)
+        if (i1 != ModBlocks.BlueStoneWireBlock.blockID && i1 != Block.redstoneWire.blockID)
         {
             return false;
         }
-        else if (i1 == 0)
+        else if (i1 == ModBlocks.BlueStoneWireBlock.blockID || i1 == Block.redstoneWire.blockID)
         {
             return true;
         }
@@ -131,16 +130,16 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
             return par4 == (j1 & 3) || par4 == Direction.rotateOpposite[j1 & 3];
         }
     }
-    /*
+    
     public static boolean isPowerProviderOrTorch(IBlockAccess par0IBlockAccess, int par1, int par2, int par3, int par4)
     {
         int i1 = par0IBlockAccess.getBlockId(par1, par2, par3);
 
-        if (i1 != ModBlocks.BlueStoneTorchActive.blockID)
+        if (i1 != ModBlocks.BlueStoneTorchActive.blockID && i1 != Block.torchRedstoneActive.blockID)
         {
             return false;
         }
-        else if (i1 == 0)
+        else if (i1 == ModBlocks.BlueStoneTorchActive.blockID)
         {
             return true;
         }
@@ -150,7 +149,7 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
             return par4 == (j1 & 3) || par4 == Direction.rotateOpposite[j1 & 3];
         }
     }
-    */
+    
     /**
      * Returns true if the block coordinate passed can provide power, or is a redstone wire, or if its a repeater that
      * is powered.
@@ -166,7 +165,7 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
         {
             int i1 = par0IBlockAccess.getBlockId(par1, par2, par3);
 
-            if (i1 == Block.bluestoneRepeaterActive.blockID)
+            if (i1 == ModBlocks.bluestoneRepeaterActive.blockID || Block.redstoneRepeaterActive.blockID)
             {
                 int j1 = par0IBlockAccess.getBlockMetadata(par1, par2, par3);
                 return par4 == (j1 & 3);
@@ -199,10 +198,11 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
      * Sets the strength of the wire current (0-15) for this block based on neighboring blocks and propagates to
      * neighboring redstone wires
      */
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     private void updateAndPropagateCurrentStrength(World par1World, int par2, int par3, int par4)
     {
         this.calculateCurrentChanges(par1World, par2, par3, par4, par2, par3, par4);
-        ArrayList arraylist = new ArrayList(this.blocksNeedingUpdate);
+		ArrayList arraylist = new ArrayList(this.blocksNeedingUpdate);
         this.blocksNeedingUpdate.clear();
 
         for (int l = 0; l < arraylist.size(); ++l)
@@ -212,7 +212,8 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
         }
     }
     
-    private void calculateCurrentChanges(World par1World, int par2, int par3, int par4, int par5, int par6, int par7)
+    @SuppressWarnings("unchecked")
+	private void calculateCurrentChanges(World par1World, int par2, int par3, int par4, int par5, int par6, int par7)
     {
         int k1 = par1World.getBlockMetadata(par2, par3, par4);
         byte b0 = 0;
@@ -413,4 +414,31 @@ public class Block_Wire_BlueStone extends BlockWireRSaH
         return par0Str == blockWire.getIconCross() ? blockWire.iconCross : (par0Str == blockWire.getIconLine() ? blockWire.iconLine : (par0Str == blockWire.getIconCrossOverlay() ? blockWire.iconCrossOverlay : (par0Str == blockWire.getIconLineOverlay() ? blockWire.iconLineOverlay : null)));
     }
     */
+    
+    private static final String setIconCross = "BlueStoneDust_Cross";
+	private static final String setIconLine = "BlueStoneDust_Line";
+	private static final String setIconCrossOverlay = "BlueStoneDust_Cross_Overlay";
+	private static final String setIconLineOverlay = "BlueStoneDust_Line_Overlay";
+    
+    @SideOnly(Side.CLIENT)
+
+    /**
+     * When this method is called, your block should register all the icons it needs with the given IconRegister. This
+     * is the only chance you get to register icons.
+     */
+    public void registerIcons(IconRegister par1IconRegister)
+    {
+    	Block_Wire_BlueStone.field_94413_c = par1IconRegister.registerIcon(Reference.MOD_ID + ":" + ("BlueStoneDust_Cross"));
+    	Block_Wire_BlueStone.field_94410_cO = par1IconRegister.registerIcon(Reference.MOD_ID + ":" + ("BlueStoneDust_Line"));
+    	Block_Wire_BlueStone.field_94411_cP = par1IconRegister.registerIcon(Reference.MOD_ID + ":" + ("BlueStoneDust_Cross_Overlay"));
+    	Block_Wire_BlueStone.field_94412_cQ = par1IconRegister.registerIcon(Reference.MOD_ID + ":" + ("BlueStoneDust_Line_Overlay"));
+        this.blockIcon = Block_Wire_BlueStone.field_94413_c;
+    }
+    
+    @SideOnly(Side.CLIENT)
+    public static Icon func_94409_b(String par0Str)
+    {
+        return par0Str == "BlueStoneDust_Cross" ? Block_Wire_BlueStone.field_94413_c : (par0Str == "BlueStoneDust_Line" ? Block_Wire_BlueStone.field_94410_cO : (par0Str == "BlueStoneDust_Cross_Overlay" ? Block_Wire_BlueStone.field_94411_cP : (par0Str == "BlueStoneDust_Line_Overlay" ? Block_Wire_BlueStone.field_94412_cQ : null)));
+    }
+    
 }

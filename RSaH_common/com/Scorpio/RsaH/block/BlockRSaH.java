@@ -17,9 +17,13 @@ public class BlockRSaH extends Block
 	}
 	
 	@SideOnly(Side.CLIENT)
-	@Override
+	
+    /**
+     * When this method is called, your block should register all the icons it needs with the given IconRegister. This
+     * is the only chance you get to register icons.
+     */
 	public void registerIcons(IconRegister register)
 	{
-		blockIcon = register.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".")+1));
+		blockIcon = register.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
 	}
 }
